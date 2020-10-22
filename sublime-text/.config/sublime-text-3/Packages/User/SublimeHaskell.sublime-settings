@@ -1,0 +1,16 @@
+{
+    "haskell_build_tool": "stack",
+
+    // Enable auto check on save
+    "enable_auto_check": false,
+
+    // lint & check on the fly
+    "lint_check_fly": false,
+
+    // idle time in seconds before lint & check on the fly
+    "lint_check_fly_idle": 5,
+
+    "enable_hdocs": true,
+
+    "auto_completion_popup": true,
+}

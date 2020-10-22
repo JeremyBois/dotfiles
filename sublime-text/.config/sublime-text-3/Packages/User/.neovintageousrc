@@ -1,0 +1,111 @@
+" The character " (the double quote mark) starts a comment
+
+" Commands                        Mode
+" --------                        ----
+" nmap, nnoremap, nunmap          Normal mode
+" imap, inoremap, iunmap          Insert and Replace mode
+" vmap, vnoremap, vunmap          Visual and Select mode
+" xmap, xnoremap, xunmap          Visual mode
+" smap, snoremap, sunmap          Select mode
+" cmap, cnoremap, cunmap          Command-line mode
+" omap, onoremap, ounmap          Operator pending mode
+
+
+" Motion
+" https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
+" ## Replace: cgn <new string>
+" find word --> cgn --> new string --> escape --> . (replace next)
+"                                             --> n (move to next)
+"                                             --> u (undo last action)
+
+" Surround
+" ## Replace: cs<old><new>
+" ## Add:     ysiw<new>
+" ## Delete:  ds<old>
+
+
+
+let mapleader=,
+
+
+" Redo with U instead of Ctrl+R
+nnoremap U <C-r>
+
+" Quick back to normal mode (<C-c> or CapsLock or Escape)
+
+" Easier shortcut to trigger command
+nnoremap <space> :
+
+" Visually select all content
+nnoremap <leader>a ggvG
+
+" Quick save
+noremap <Leader>s :Save<CR>
+noremap <Leader>S :PromptSaveAs<CR>
+
+" Quick close
+noremap <Leader>q :Close<CR>
+
+" Quick restore
+noremap <Leader>t :ReopenLastFile<CR>
+
+" Quick file
+noremap <Leader>n :NewFile<CR>
+
+
+" Multiple cursors like in sublime multi selection
+nnoremap <C-d> gh
+snoremap <C-d> j
+snoremap <C-p> k
+snoremap <C-k> l
+snoremap i <Esc>i
+
+
+" Search normal (no regex syntax)
+" ?\V or /\V
+
+
+" Cut and delete does not store data in a register
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+" Actual cut must be done using leader first
+nnoremap <leader>d "+d
+nnoremap <leader>D "+D
+vnoremap <leader>d "+d
+" Actual delete must be done using leader first
+nnoremap <leader>x "+x
+vnoremap <leader>x "+x
+
+
+" Store in clipboard
+vnoremap y "+y
+nnoremap y "+y
+" Paste from clipboard
+vnoremap p "+p
+nnoremap p "+p
+" Copy to clipboard (not needed because everything is store to clipboard now)
+" vnoremap <C-c> "+y
+
+" Newline without leaving normal mode
+nnoremap <leader>o o<ESC>
+nnoremap <leader>O O<ESC>
+
+
+" Folds
+nnoremap zc :Fold<CR>
+nnoremap zo :Unfold<CR>
+nnoremap zM :FoldAll<CR>
+nnoremap zR :UnfoldAll<CR>
+
+
+" AceJump plugin
+" https://github.com/ice9js/ace-jump-sublime
+nnoremap <leader><leader>a :AceJumpAfter<CR>
+nnoremap <leader><leader>c :AceJumpChar<CR>
+nnoremap <leader><leader>d :AceJumpAddCursor<CR>
+nnoremap <leader><leader>i :AceJumpWithinLine<CR>
+nnoremap <leader><leader>l :AceJumpLine<CR>
+nnoremap <leader><leader>s :AceJumpSelect<CR>
+nnoremap <leader><leader>w :AceJumpWord<CR>

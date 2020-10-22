@@ -1,0 +1,24 @@
+{
+    "enable_docstrings_tooltip": false,
+
+    /*
+        A list of pep8 error numbers to ignore.
+        The list of error codes is in this file:
+            https://pycodestyle.readthedocs.io/en/latest/intro.html#error-codes.
+        Search for "Ennn:", where nnn is a 3-digit number.
+        E309 is ignored by default as it conflicts with pep257 E211
+    */
+    "pep8_ignore":
+    [
+        "E501",
+    ],
+
+
+
+    /*
+        MyPy
+
+        Set the following option to true to enable MyPy checker.
+    */
+    "mypy": true,
+}

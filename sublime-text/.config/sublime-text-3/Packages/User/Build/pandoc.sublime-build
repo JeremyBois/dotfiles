@@ -1,0 +1,34 @@
+{
+    "cmd": ["pandoc", "-r", "markdown+smart", "--standalone", "-w", "html5",
+            "--mathml", "-c", "file:///home/pampi/Documents/Logiciels/Templates/scholar_markdown/css/gitlab.css",
+            // "--mathml", "-c", "file:///home/pampi/Documents/Logiciels/Templates/scholar_markdown/css/markdown.css",
+            // "--mathml", "-c", "file:///home/pampi/Documents/Logiciels/Templates/scholar_markdown/css/scholmd-heuristically-latest.min.css",
+            // "--latexmathml", "-c", "file:///home/pampi/Documents/Logiciels/Templates/scholar_markdown/css/scholmd-heuristically-latest.min.css",
+            "${file}",
+            "-o", "${file_path}/${file_base_name}.html"],
+    "selector": "text.html.markdown",
+    "working_dir": "${file_path}",
+    "windows":
+    {
+        "cmd": ["C:/Users/bois/AppData/Local/Pandoc/pandoc.exe", "-r", "markdown+smart", "--standalone", "-w", "html5",
+                "--mathjax", "-c", "file:///C:/Users/bois/AppData/Local/Pandoc/css/scholmd-heuristically-latest.min.css",
+                "${file}",
+                "-o", "${file_path}/${file_base_name}.html"],
+    },
+    "variants":
+    [
+        {
+            "name": "Make pdf",
+            "cmd": ["pandoc", "-r", "markdown+smart", "${file_path}/${file_base_name}.md",
+                    "--standalone", "--template", "/home/pampi/Documents/Logiciels/Templates/jeremyDefault.tex", "--listings", "--number-sections", "--top-level-division=chapter",
+                    "--pdf-engine=xelatex", "-o", "${file_path}/${file_base_name}.pdf"],
+        },
+        {
+            "name": "Make tex",
+            "cmd": ["pandoc", "-r", "markdown+smart", "${file_path}/${file_base_name}.md",
+                    "--standalone", "--template", "/home/pampi/Documents/Logiciels/Templates/jeremyDefault.tex", "--listings", "--number-sections", "--top-level-division=chapter",
+                    "--pdf-engine=xelatex", "-o", "${file_path}/${file_base_name}.tex"],
+        }
+    ],
+
+}

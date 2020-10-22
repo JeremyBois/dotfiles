@@ -1,0 +1,171 @@
+[
+
+    ////////////////////////////////////////////////////////////////////////////
+    ///////////////////////  Navigation  ///////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
+    // // Change focus group
+    { "keys": ["ctrl+alt+w", "left"], "command": "focus_group", "args": { "group": 0 } },
+    { "keys": ["ctrl+alt+w", "right"], "command": "focus_group", "args": { "group": 1 } },
+    { "keys": ["ctrl+alt+w", "up"], "command": "focus_group", "args": { "group": 2 } },
+    { "keys": ["ctrl+alt+w", "down"], "command": "focus_group", "args": { "group": 3 } },
+
+    // Toogle sideBar
+    { "keys": ["alt+x"], "command": "toggle_side_bar" },
+
+    // Toogle menu
+    {"keys": ["ctrl+alt+0"], "command": "toggle_menu"},
+
+    // Toggle cmdPanel
+    { "keys": ["ctrl+,"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+
+    // Just one layout
+    {
+        "keys": ["ctrl+alt+w", "h"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1]]
+        }
+    },
+
+    // Vertical split (2)
+    {
+        "keys": ["ctrl+alt+w", "j"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 0.5, 1.0],
+            "rows": [0.0, 1.0],
+            "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+        }
+    },
+
+    // Horizontal split (2)
+    {
+        "keys": ["ctrl+alt+w", "k"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 1.0],
+            "rows": [0.0, 0.5, 1.0],
+            "cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
+        }
+    },
+
+    // Grid split (4)
+    {
+        "keys": ["ctrl+alt+w", "l"],
+        "command": "set_layout",
+        "args":
+        {
+            "cols": [0.0, 0.5, 1.0],
+            "rows": [0.0, 0.5, 1.0],
+            "cells":
+            [
+                [0, 0, 1, 1], [1, 0, 2, 1],
+                [0, 1, 1, 2], [1, 1, 2, 2]
+            ]
+        }
+    },
+
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////  Autocompletion  //////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+
+    { "keys": ["ctrl+space"], "command": "auto_complete" },
+    { "keys": ["ctrl+space"], "command": "replace_completion_with_auto_complete",
+        "context":
+        [
+            { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+            { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+            { "key": "setting.tab_completion", "operator": "equal", "operand": true }
+        ]
+    },
+
+
+    // ////////////////////////////////////////////////////////////////////////////
+    // ///////////////////////// Intellisense /////////////////////////////////////
+    // ////////////////////////////////////////////////////////////////////////////
+
+
+
+    // When coding using Python
+    {
+        "command": "anaconda_goto", "keys": ["f12"], "context": [
+            {"key": "selector", "operator": "equal", "operand": "source.python"}
+        ]
+    },
+    {
+        "command": "anaconda_find_usages", "keys": ["shift+f12"], "context": [
+            {"key": "selector", "operator": "equal", "operand": "source.python"}
+        ]
+    },
+    {
+        "command": "anaconda_doc", "keys": ["ctrl+k", "ctrl+i"], "context": [
+            {"key": "selector", "operator": "equal", "operand": "source.python"}
+        ]
+    },
+
+
+    // // When coding using C#
+    // {"command": "omni_sharp_go_to_definition", "keys": ["f12"],
+    //     "context": [
+    //         {"key" : "selector", "operator": "equal", "operand": "source.cs"}
+    //     ]
+    // },
+    // {"command": "omni_sharp_find_usages", "keys": ["shift+f12"],
+    //     "context": [
+    //         {"key" : "selector", "operator": "equal", "operand": "source.cs"}
+    //     ]
+    // },
+    // {"command": "omni_sharp_type_lookup", "keys": ["ctrl+k", "ctrl+i"],
+    //     "context": [
+    //         {"key" : "selector", "operator": "equal", "operand": "source.cs"}
+    //     ]
+    // },
+    // // Must comment OmniSharp default to avoid losing ctrl+k, ctrl+d control
+    // {"command": "omni_sharp_format_document", "keys": ["ctrl+alt+f"],
+    //     "context": [
+    //             {"key" : "selector", "operator": "equal", "operand": "source.cs"}
+    //         ]
+    // },
+
+    // // When coding using C++
+    // { "keys": ["f12"], "command": "ecc_goto_declaration",
+    //     "context": [
+    //             {"key" : "selector", "operator": "equal", "operand": "source.cpp"},
+    //         ]
+    // },
+
+
+    // When coding using Haskell
+    {
+        "keys": ["ctrl+alt+r"],
+        "context": [
+            { "key": "haskell_source" },
+            { "key": "scanned_source" },
+        ],
+        "command": "show_panel",
+        "args": { "panel": "output.sublime_haskell_output_panel" }
+    },
+
+    ////////////////////////////////////////////////////////////////////////////
+    //////////////////////////// Toggle theme //////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    {
+      "keys": ["ctrl+alt+;"], "command": "toggle_theme"
+    },
+
+    ////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////// Vintageous ///////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    {
+        "keys": ["j", "j"],
+        "command": "_enter_normal_mode",
+        "args": {"mode": "mode_insert"},
+        "context": [{"key": "vi_insert_mode_aware"}]
+    }
+]

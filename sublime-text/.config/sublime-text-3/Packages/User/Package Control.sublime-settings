@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AceJump",
+		"CMake",
+		"Color Highlight",
+		"Dockerfile Syntax Highlighting",
+		"EasyClangComplete",
+		"Language - French - Français",
+		"LaTeXTools",
+		"MarkdownPreview",
+		"NeoVintageous",
+		"Package Control",
+		"PowerCursors",
+		"Python 3",
+		"SideBarEnhancements",
+		"SublimeHaskell",
+		"SublimeREPL"
+	]
+}
