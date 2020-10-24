@@ -1,0 +1,569 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.fontFamily": "'mononoki Nerd Font Mono',  monospace",
+    "editor.fontSize": 17,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.cursorBlinking": true,
+    "editor.mouseWheelZoom": true,
+    "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
+    "extensions.autoUpdate": false,
+    "haskell.formattingProvider": "stylish-haskell",
+    "haskell.trace.server": "messages",
+    "window.zoomLevel": 1,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    },
+    "modaledit.keybindings": {
+       "0": {
+            "command": "cursorMove",
+            "args": "{ to: 'wrappedLineStart', select: __selecting }"
+        },
+        "\n": [
+            "cursorDown",
+            {
+                "command": "cursorMove",
+                "args": {
+                    "to": "wrappedLineFirstNonWhitespaceCharacter"
+                }
+            }
+        ],
+        " ": "cursorRight",
+        "h": "cursorLeft",
+        "j": "cursorDown",
+        "k": "cursorUp",
+        "l": "cursorRight",
+        "$": {
+            "command": "cursorMove",
+            "args": "{ to: 'wrappedLineEnd', select: __selecting }"
+        },
+        "^": {
+            "command": "cursorMove",
+            "args": "{ to: 'wrappedLineFirstNonWhitespaceCharacter', select: __selecting }"
+        },
+        "g": {
+            "_": {
+                "command": "cursorMove",
+                "args": "{ to: 'wrappedLineLastNonWhitespaceCharacter', select: __selecting }"
+            },
+            "g": {
+                "condition": "__selecting",
+                "true": "cursorTopSelect",
+                "false": "cursorTop"
+            },
+            "J": [
+                "editor.action.joinLines",
+                "deleteRight"
+            ],
+            "u,U": {
+                "id": 1,
+                "help": "Change case with motion",
+                "u,U": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: __cmd.slice(0, -3) + 'V' + __rcmd[0] }"
+                },
+                "h,j,k,l,w,e,b,W,B,%": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: 'v' + __cmd.slice(0, -3) + __rcmd[0] + __rcmd[1] }"
+                },
+                "^,$,0,G,H,M,L": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: 'v' + __rcmd[0] + __rcmd[1] }"
+                },
+                "g": {
+                    "g,_": {
+                        "command": "modaledit.typeNormalKeys",
+                        "args": "{ keys: 'v' + __rcmd[1] + __rcmd[0] + __rcmd[2] }"
+                    }
+                },
+                "f,t,F,T": {
+                    "help": "Do until _",
+                    " -~": {
+                        "command": "modaledit.typeNormalKeys",
+                        "args": "{ keys: 'v' + __rcmd[1] + __rcmd[0] + __rcmd[2] }"
+                    }
+                },
+                "a,i": {
+                    "help": "Do around/inside _",
+                    "w,p,b,B,t, -/,:-@,[-`,{-~": {
+                        "command": "modaledit.typeNormalKeys",
+                        "args": "{ keys: 'v' + __rcmd[1] + __rcmd[0] + __rcmd[2] }"
+                    }
+                },
+                "`,'": {
+                    "help": "Do until mark _",
+                    "a-z": {
+                        "command": "modaledit.typeNormalKeys",
+                        "args": "{ keys: 'v' + __rcmd[1] + __rcmd[0] + __rcmd[2] }"
+                    }
+                }
+            },
+            "t": "workbench.action.nextEditor",
+            "T": "workbench.action.previousEditor"
+        },
+        "G": {
+            "condition": "__selecting",
+            "true": "cursorBottomSelect",
+            "false": "cursorBottom"
+        },
+        "w": "cursorWordStartRight",
+        "e": "cursorWordEndRight",
+        "b": "cursorWordStartLeft",
+        "W": {
+            "command": "cursorWordStartRight",
+            "repeat": "__char.match(/\\W/)"
+        },
+        "B": {
+            "command": "cursorWordStartLeft",
+            "repeat": "__char.match(/\\W/)"
+        },
+        "H": {
+            "command": "cursorMove",
+            "args": "{ to: 'viewPortTop', select: __selecting }"
+        },
+        "M": {
+            "command": "cursorMove",
+            "args": "{ to: 'viewPortCenter', select: __selecting }"
+        },
+        "L": {
+            "command": "cursorMove",
+            "args": "{ to: 'viewPortBottom', select: __selecting }"
+        },
+        "%": {
+            "condition": "__selecting",
+            "true": "editor.action.smartSelect.expand",
+            "false": "editor.action.jumpToBracket"
+        },
+        "f": {
+            "command": "modaledit.search",
+            "args": {
+                "acceptAfter": 1,
+                "typeAfterAccept": "hv",
+                "typeBeforeNextMatch": "l",
+                "typeAfterNextMatch": "hv",
+                "typeAfterPreviousMatch": "v"
+            }
+        },
+        "F": {
+            "command": "modaledit.search",
+            "args": {
+                "acceptAfter": 1,
+                "backwards": true,
+                "typeAfterAccept": "v",
+                "typeAfterNextMatch": "v",
+                "typeBeforePreviousMatch": "l",
+                "typeAfterPreviousMatch": "hv"
+            }
+        },
+        "t": {
+            "command": "modaledit.search",
+            "args": {
+                "acceptAfter": 1,
+                "typeAfterAccept": "hhv",
+                "typeBeforeNextMatch": "ll",
+                "typeAfterNextMatch": "hhv",
+                "typeBeforePreviousMatch": "h",
+                "typeAfterPreviousMatch": "lv"
+            }
+        },
+        "T": {
+            "command": "modaledit.search",
+            "args": {
+                "acceptAfter": 1,
+                "backwards": true,
+                "typeAfterAccept": "lv",
+                "typeBeforeNextMatch": "h",
+                "typeAfterNextMatch": "lv",
+                "typeBeforePreviousMatch": "ll",
+                "typeAfterPreviousMatch": "hhv"
+            }
+        },
+        ";": "modaledit.nextMatch",
+        ",": "modaledit.previousMatch",
+        "m": {
+            "help": "Define mark _",
+            "a-z": {
+                "command": "modaledit.defineBookmark",
+                "args": "{ bookmark: __rcmd[0] }"
+            }
+        },
+        "`": {
+            "a-z": {
+                "command": "modaledit.goToBookmark",
+                "args": "{ bookmark: __rcmd[0], select: __selecting }"
+            }
+        },
+        "'": {
+            "a-z": [
+                {
+                    "command": "modaledit.goToBookmark",
+                    "args": "{ bookmark: __rcmd[0], select: __selecting }"
+                },
+                {
+                    "command": "cursorMove",
+                    "args": "{ to: 'wrappedLineFirstNonWhitespaceCharacter', select: __selecting }"
+                }
+            ]
+        },
+        "i": "modaledit.enterInsert",
+        "I": [
+            "cursorHome",
+            "modaledit.enterInsert"
+        ],
+        "a": [
+            {
+                "condition": "__char == ''",
+                "false": "cursorRight"
+            },
+            "modaledit.enterInsert"
+        ],
+        "A": [
+            "cursorEnd",
+            "modaledit.enterInsert"
+        ],
+        "o": [
+            "editor.action.insertLineAfter",
+            "modaledit.enterInsert"
+        ],
+        "O": [
+            "editor.action.insertLineBefore",
+            "modaledit.enterInsert"
+        ],
+        "v": "modaledit.toggleSelection",
+        "V": [
+            {
+                "command": "cursorMove",
+                "args": {
+                    "to": "wrappedLineStart"
+                }
+            },
+            "modaledit.toggleSelection",
+            "cursorDownSelect"
+        ],
+        "x": "deleteRight",
+        "X": "deleteLeft",
+        "r,s": [
+            "deleteRight",
+            "modaledit.enterInsert"
+        ],
+        "S": {
+            "command": "modaledit.typeNormalKeys",
+            "args": {
+                "keys": "cc"
+            }
+        },
+        "D": [
+            "modaledit.cancelSelection",
+            "cursorEndSelect",
+            "editor.action.clipboardCopyAction",
+            "deleteRight",
+            "modaledit.cancelSelection"
+        ],
+        "C": {
+            "command": "modaledit.typeNormalKeys",
+            "args": {
+                "keys": "Di"
+            }
+        },
+        "Y": [
+            "modaledit.cancelSelection",
+            "cursorEndSelect",
+            "editor.action.clipboardCopyAction",
+            "modaledit.cancelSelection"
+        ],
+        "p": [
+            "cursorRight",
+            "editor.action.clipboardPasteAction",
+            "modaledit.cancelSelection"
+        ],
+        "P": [
+            "editor.action.clipboardPasteAction",
+            "modaledit.cancelSelection"
+        ],
+        "J": "editor.action.joinLines",
+        "u": [
+            "undo",
+            "modaledit.cancelSelection"
+        ],
+        "U":[
+            "redo",
+            "modaledit.cancelSelection"
+        ],
+        ".": "modaledit.repeatLastChange",
+        "d,y,c,<,>,=": {
+            "id": 2,
+            "help": "Edit with motion",
+            "d,y,c,<,>,=": {
+                "command": "modaledit.typeNormalKeys",
+                "args": "{ keys: __cmd.slice(0, -2) + 'V' + (__rcmd[0] =='c' ? 'dO' : __rcmd[0]) }"
+            },
+            "h,j,k,l,w,e,b,W,B,%": {
+                "command": "modaledit.typeNormalKeys",
+                "args": "{ keys: 'v' + __cmd.slice(0, -2) + __rcmd[0] + __rcmd[1] }"
+            },
+            "^,$,0,G,H,M,L": {
+                "command": "modaledit.typeNormalKeys",
+                "args": "{ keys: 'v' + __rcmd[0] + __rcmd[1] }"
+            },
+            "g": {
+                "g,_": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: 'v' + __rcmd[1] + __rcmd[0] + __rcmd[2] }"
+                }
+            },
+            "f,t,F,T": {
+                "help": "Do until _",
+                " -~": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: 'v' + __rcmd[1] + __rcmd[0] + __rcmd[2] }"
+                }
+            },
+            "a,i": {
+                "help": "Do around/inside _",
+                "w,p,b,B,t, -/,:-@,[-`,{-~": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: 'v' + __rcmd[1] + __rcmd[0] + __rcmd[2] }"
+                }
+            },
+            "`,'": {
+                "help": "Do until mark _",
+                "a-z": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: 'v' + __rcmd[1] + __rcmd[0] + __rcmd[2] }"
+                }
+            }
+        },
+        "1-9": {
+            "id": 3,
+            "help": "Repeat / go to line",
+            "0-9": 3,
+            "h,j,k,l,w,e,b,W,B,u,%": {
+                "command": "modaledit.typeNormalKeys",
+                "args": "{ keys: __rcmd[0] }",
+                "repeat": "parseInt(__cmd)"
+            },
+            "v": {
+                "command": "cursorRightSelect",
+                "repeat": "parseInt(__cmd)"
+            },
+            "V": {
+                "command": "expandLineSelection",
+                "repeat": "parseInt(__cmd)"
+            },
+            "s": {
+                "command": "modaledit.typeNormalKeys",
+                "args": "{ keys: parseInt(__cmd) + 'vc' }"
+            },
+            "S": {
+                "command": "modaledit.typeNormalKeys",
+                "args": "{ keys: parseInt(__cmd) + 'cc' }"
+            },
+            "J": [
+                {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: parseInt(__cmd) + 'VJ' }"
+                },
+                "modaledit.cancelSelection"
+            ],
+            "G": [
+                {
+                    "command": "revealLine",
+                    "args": "{ lineNumber: parseInt(__cmd) - 1, at: 'top' }"
+                },
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "viewPortTop"
+                    }
+                }
+            ],
+            "g": {
+                "g": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: parseInt(__cmd) + 'G' }"
+                },
+                "J": {
+                    "command": "modaledit.typeNormalKeys",
+                    "args": "{ keys: __cmd.slice(-2) }",
+                    "repeat": "parseInt(__cmd)"
+                },
+                "u,U": 1
+            },
+            "d,c,y,<,>,=": 2
+        },
+        "/": [
+            {
+                "command": "modaledit.search",
+                "args": {
+                    "caseSensitive": true,
+                    "wrapAround": true
+                }
+            }
+        ],
+        "?": {
+            "command": "modaledit.search",
+            "args": {
+                "backwards": true,
+                "caseSensitive": true,
+                "wrapAround": true
+            }
+        },
+        "n": "modaledit.nextMatch",
+        "N": "modaledit.previousMatch",
+        ":": "workbench.action.showCommands",
+        "z": {
+            "z": {
+                "command": "revealLine",
+                "args": "{ lineNumber: __line, at: 'center' }"
+            }
+        },
+        "Z": {
+            "help": "Z - Close and save, Q - Close without saving",
+            "Z": [
+                "workbench.action.files.save",
+                "workbench.action.closeActiveEditor"
+            ],
+            "Q": "workbench.action.closeActiveEditor"
+        }
+    },
+    "modaledit.selectbindings": {
+        "l": "cursorRightSelect",
+        "h": "cursorLeftSelect",
+        "j": "cursorDownSelect",
+        "k": "cursorUpSelect",
+        "w": "cursorWordStartRightSelect",
+        "e": "cursorWordEndRightSelect",
+        "b": "cursorWordStartLeftSelect",
+        "W": {
+            "command": "cursorWordStartRightSelect",
+            "repeat": "__char.match(/\\W/)"
+        },
+        "B": {
+            "command": "cursorWordStartLeftSelect",
+            "repeat": "__char.match(/\\W/)"
+        },
+        "f": {
+            "command": "modaledit.search",
+            "args": {
+                "acceptAfter": 1,
+                "selectTillMatch": true
+            }
+        },
+        "F": {
+            "command": "modaledit.search",
+            "args": {
+                "acceptAfter": 1,
+                "backwards": true,
+                "selectTillMatch": true
+            }
+        },
+        "t": {
+            "command": "modaledit.search",
+            "args": {
+                "acceptAfter": 1,
+                "typeAfterAccept": "h",
+                "typeBeforeNextMatch": "l",
+                "typeAfterNextMatch": "h",
+                "typeBeforePreviousMatch": "h",
+                "typeAfterPreviousMatch": "l",
+                "selectTillMatch": true
+            }
+        },
+        "T": {
+            "command": "modaledit.search",
+            "args": {
+                "acceptAfter": 1,
+                "backwards": true,
+                "typeAfterAccept": "l",
+                "typeBeforeNextMatch": "h",
+                "typeAfterNextMatch": "l",
+                "typeBeforePreviousMatch": "l",
+                "typeAfterPreviousMatch": "h",
+                "selectTillMatch": true
+            }
+        },
+        "a,i": {
+            "help": "Select around/inside _",
+            "w": [
+                {
+                    "command": "modaledit.selectBetween",
+                    "args": "{ from: '\\\\W', to: '\\\\W', regex: true, inclusive: __rcmd[1] == 'a' }"
+                }
+            ],
+            "p": [
+                {
+                    "command": "modaledit.selectBetween",
+                    "args": "{ from: '(?<=\\\\r?\\\\n)\\\\s*\\\\r?\\\\n', to: '(?<=\\\\r?\\\\n)\\\\s*\\\\r?\\\\n', regex: true, inclusive: __rcmd[1] == 'a', docScope: true }"
+                }
+            ],
+            " -/,:-@,[-`,{-~": [
+                {
+                    "command": "modaledit.selectBetween",
+                    "args": "{ from: __rcmd[0], to: __rcmd[0], inclusive: __rcmd[1] == 'a' }"
+                }
+            ],
+            "(,),b": [
+                {
+                    "command": "modaledit.selectBetween",
+                    "args": "{ from: '(', to: ')', inclusive: __rcmd[1] == 'a', docScope: true }"
+                }
+            ],
+            "{,},B": [
+                {
+                    "command": "modaledit.selectBetween",
+                    "args": "{ from: '{', to: '}', inclusive: __rcmd[1] == 'a', docScope: true }"
+                }
+            ],
+            "[,]": [
+                {
+                    "command": "modaledit.selectBetween",
+                    "args": "{ from: '[', to: ']', inclusive: __rcmd[1] == 'a', docScope: true }"
+                }
+            ],
+            "<,>,t": [
+                {
+                    "command": "modaledit.selectBetween",
+                    "args": "{ from: '<', to: '>', inclusive: __rcmd[1] == 'a' }"
+                }
+            ]
+        },
+        ">": [
+            "editor.action.indentLines",
+            "modaledit.cancelSelection"
+        ],
+        "<": [
+            "editor.action.outdentLines",
+            "modaledit.cancelSelection"
+        ],
+        "=": [
+            "editor.action.formatSelection",
+            "modaledit.cancelSelection"
+        ],
+        "d,x": [
+            "editor.action.clipboardCopyAction",
+            "deleteRight",
+            "modaledit.cancelSelection"
+        ],
+        "c": [
+            "editor.action.clipboardCopyAction",
+            "deleteRight",
+            "modaledit.enterInsert"
+        ],
+        "y": [
+            "editor.action.clipboardCopyAction",
+            "modaledit.cancelSelection"
+        ],
+        "u": [
+            "editor.action.transformToLowercase",
+            "modaledit.cancelSelection"
+        ],
+        "U": [
+            "editor.action.transformToUppercase",
+            "modaledit.cancelSelection"
+        ]
+    },
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "settingsSync.keybindingsPerPlatform": false,
+    "workbench.settings.enableNaturalLanguageSearch": false
+}

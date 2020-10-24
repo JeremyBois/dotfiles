@@ -1,0 +1,10 @@
+Braver.vscode-solarized
+haskell.haskell
+jcanero.hoogle-vscode
+johtela.vscode-modaledit
+justusadam.language-haskell
+ms-azuretools.vscode-docker
+ms-dotnettools.csharp
+ms-python.python
+ms-vscode.cpptools
+Unity.unity-debug
