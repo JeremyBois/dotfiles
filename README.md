@@ -19,3 +19,20 @@ This will symlink the pacman.conf file to `/etc/pacman.conf`.
 Make sure the file doesn't already exist or a symlink cannot be made.
 
 `sudo stow -t / pacman`
+
+
+
+## Special case
+### Vscode (code)
+To backup vscode extensions:
+```bash
+    chmod +x code/codeExtensions.sh
+    ./code/codeExtensions.sh save
+```
+
+
+To restore vscode extensions:
+```bash
+    ./code/codeExtensions.sh install
+    stow code
+```
