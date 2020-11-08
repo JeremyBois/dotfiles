@@ -8,3 +8,6 @@
 #
 packages: []
 resolver: lts-16.19
+
+ghc-options:
+  "$everything": -haddock
