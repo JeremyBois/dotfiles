@@ -172,7 +172,6 @@
 	"ignored_packages":
 	[
 		"Six",
-		"SublimeHaskell",
 		"Vintage",
 		"Vintageous"
 	],
