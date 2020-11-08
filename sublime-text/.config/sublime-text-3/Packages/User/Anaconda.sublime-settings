@@ -1,4 +1,6 @@
 {
+    "auto_formatting_timeout": 2,  // seconds
+
     "enable_docstrings_tooltip": false,
 
     /*
@@ -11,6 +13,7 @@
     "pep8_ignore":
     [
         "E501",
+        "W503",
     ],
 
 
