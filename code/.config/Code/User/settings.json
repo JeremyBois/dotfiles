@@ -565,5 +565,7 @@
     "python.linting.mypyEnabled": true,
     "python.linting.pylintEnabled": false,
     "settingsSync.keybindingsPerPlatform": false,
-    "workbench.settings.enableNaturalLanguageSearch": false
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "window.restoreFullscreen": true,
+    "editor.multiCursorModifier": "ctrlCmd"
 }
