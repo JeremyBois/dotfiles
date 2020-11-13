@@ -1,0 +1,17 @@
+{
+    "codeCellConfig": {
+        "fontFamily": "mononoki",
+        "fontSize": 15,
+         
+    },
+    
+    "markdownCellConfig": {
+        "fontFamily": "mononoki",
+        "fontSize": 15,
+    },
+        
+    "rawCellConfig": {
+        "fontFamily": "mononoki",
+        "fontSize": 15,
+    },
+}
