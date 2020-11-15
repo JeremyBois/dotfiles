@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=redshift-gtk
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_GB]=Redshift
+Comment[en_GB]=Start Redshift with config from .config/redshift/redshift.conf
+X-GNOME-Autostart-Delay=2
