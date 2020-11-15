@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=Jupyter Haskell
+Exec=jupyter qtconsole --kernel=haskell
+Icon=/home/pampi/Pictures/Icon/haskellLogo.jpeg
+GenericName[en_US]=Jupyter shell with haskell kernel
+GenericName=Jupyter shell with haskell kernel
+Name[en_US]=Jupyter Haskell console
+Name=Jupyter Haskell console
+Categories=Development;Utility;
+Terminal=false
+Type=Application
+Path=
+StartupNotify=false
