@@ -71,9 +71,12 @@
         }
     },
 
-    // Can conflict with PowerCursor
-    { "keys": ["alt+-"], "command": "jump_back" },
-    { "keys": ["alt+="], "command": "jump_forward" },
+    // Move quickly between references
+    { "keys": ["alt+k"], "command": "jump_back" },
+    { "keys": ["alt+j"], "command": "jump_forward" },
+
+    { "keys": ["alt+f"], "command": "open_dir",
+      "args": {"dir": "$file_path", "file": "$file_name"} },
 
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////  Autocompletion  //////////////////////////////
