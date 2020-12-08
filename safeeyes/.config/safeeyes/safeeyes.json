@@ -1,7 +1,7 @@
 {
     "allow_postpone": false,
     "long_break_duration": 300,
-    "long_break_interval": 80,
+    "long_break_interval": 60,
     "long_breaks": [
         {
             "name": "Walk for a while"
@@ -13,11 +13,11 @@
     "persist_state": false,
     "plugins": [
         {
-            "enabled": false,
+            "enabled": true,
             "id": "donotdisturb",
             "settings": {
                 "skip_break_windows": "",
-                "take_break_windows": "subl3 evince",
+                "take_break_windows": "subl3 evince firefox",
                 "unfullscreen": true,
                 "while_on_battery": false
             },
@@ -98,10 +98,10 @@
         }
     ],
     "postpone_duration": 3,
-    "pre_break_warning_time": 1,
+    "pre_break_warning_time": 10,
     "rpc_port": 7200,
     "short_break_duration": 15,
-    "short_break_interval": 20,
+    "short_break_interval": 15,
     "short_breaks": [
         {
             "name": "Tightly close your eyes"
