@@ -74,7 +74,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "smooth",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/Theme/LightSolarized.tmTheme",
+	"color_scheme": "Packages/User/Theme/DarkSolarized.tmTheme",
 	"dictionary": "Packages/Language - French - Français/fr_FR.dic",
 	"drag_text": false,
 	"draw_centered": true,
@@ -171,6 +171,7 @@
 	"highlight_line": false,
 	"ignored_packages":
 	[
+		"LSP",
 		"Six",
 		"Vintage",
 		"Vintageous"

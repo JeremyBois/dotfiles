@@ -11,14 +11,16 @@
 		"Dockerfile Syntax Highlighting",
 		"DotENV",
 		"EasyClangComplete",
+		"Gitmoji",
 		"Language - French - Français",
 		"LaTeXTools",
+		"LSP",
 		"MarkdownPreview",
 		"NeoVintageous",
 		"Package Control",
-		"PowerCursors",
 		"Python 3",
 		"SideBarEnhancements",
+		"sublack",
 		"SublimeHaskell",
 		"SublimeREPL"
 	]
