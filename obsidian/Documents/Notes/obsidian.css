@@ -1,0 +1,290 @@
+:root {
+    --base03:    #002b36;
+    --base02:    #073642;
+    --base01:    #586e75;
+    --base00:    #657b83;
+    --base0:     #839496;
+    --base1:     #93a1a1;
+    --base2:     #eee8d5;
+    --base3:     #fdf6e3;
+    --yellow:    #b58900;
+    --orange:    #cb4b16;
+    --red:       #dc322f;
+    --magenta:   #d33682;
+    --violet:    #6c71c4;
+    --blue:      #268bd2;
+    --cyan:      #2aa198;
+    --green:     #859900;
+    /* Fonts specifications */
+    --font-family-editor: "Mononoki Nerd Font Mono", "Droid Sans";
+    --font-family-preview: "Libre Baskerville";
+    --font-monospace: "Mononoki Nerd Font Mono", "Droid Sans";
+    --font-size-editor: 16px;
+    --font-size-preview: 19px;
+}
+
+.theme-dark {
+    --background-primary: var(--base03);
+    --background-primary-alt: var(--base02);
+    --background-secondary: var(--base03);
+    --background-secondary-alt: var(--base02);
+    --text-normal: var(--base1);
+    --text-faint: var(--base01);
+    --text-muted: var(--base0);
+    --text-error: var(--red);
+    --text-accent: var(--violet);
+    --text-title: var(--cyan);
+    --text-code: var(--magenta);
+    --text-tag: var(--magenta);
+    --text-highlight-fg: var(--blue);
+    --text-highlight-bg: var(--base02);
+    --background-modifier-border: var(--base01);
+    --background-modifier-form-field: var(--base02);
+    --interactive-normal: var(--red);
+    --interactive-accent: var(--orange);
+    --interactive-accent-hover: var(--cyan);
+    --interactive-accent-rgb: var(--green);
+    --vim-cursor: var(--base2);
+    --text-border: var(--yellow);
+
+}
+
+.theme-light {
+    --background-primary: var(--base3);
+    --background-primary-alt: var(--base2);
+    --background-secondary: var(--base3);
+    --background-secondary-alt: var(--base2);
+    --text-normal: var(--base01);
+    --text-faint: var(--base1);
+    --text-muted: var(--base0);
+    --text-error: var(--red);
+    --text-accent: var(--violet);
+    --text-title: var(--cyan);
+    --text-code: var(--magenta);
+    --text-tag: var(--magenta);
+    --text-highlight-fg: var(--blue);
+    --text-highlight-bg: var(--base2);
+    --pre-code: var(--base0);
+    --background-modifier-border: var(--base1);
+    --background-modifier-form-field: var(--base2);
+    --interactive-normal: var(--base3);
+    --interactive-accent: var(--orange);
+    --interactive-accent-hover: var(--cyan);
+    --interactive-accent-rgb: var(--green);
+    --text-on-accent: var(--base3);
+    --vim-cursor: var(--base02);
+    --text-border: var(--yellow);
+
+}
+
+
+
+/* Font for the markdown source panel */
+div.markdown-source-view {
+    font-family: var(--font-family-editor);
+    font-size: var(--font-size-editor);
+}
+
+/* Font for the markdown preview panel */
+div.markdown-preview-view {
+    font-family: var(--font-family-preview);
+    font-size: var(--font-size-preview);
+}
+
+
+
+/* --------------- */
+/* Fix line padding for lists/tasks and text blocks */
+p {
+  padding: 5px 0;
+  line-height: 1.8rem;
+}
+
+ul, ol {
+  padding-left: calc(1.5em + 4px);
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+li {
+  margin: 2px 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+li > p {
+  padding: 3px 2px;
+  margin: 2px 0;
+}
+
+li > p:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+li > p:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+/* --------------- */
+
+
+
+
+.cm-header {
+    color: var(--text-title);
+}
+
+h1, h2, h3, h4, h5, h6, .markdown-preview-view h6{
+    color: var(--text-title);
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+}
+
+.cm-formatting-image.cm-link {
+    color: var(--text-faint) !important;
+}
+
+.CodeMirror span.cm-inline-code,
+.CodeMirror span.cm-math,
+pre > code:not(.prism) {
+    color: var(--text-code);
+}
+
+.CodeMirror span.cm-formatting-math {
+    color: var(--text-highlight-fg);
+}
+
+pre.HyperMD-codeblock {
+    color: var(--text-normal) !important;
+}
+
+.cm-highlight, mark {
+    background: var(--text-highlight-bg) !important;
+    color: var(--text-highlight-fg) !important;
+}
+
+blockquote, .markdown-embed {
+    border-color: var(--text-border) !important;
+}
+
+.search-result-file-matched-text {
+    color: var(--text-highlight-fg);
+}
+
+.suggestion-item.is-selected {
+    background-color: var(--background-secondary-alt);
+}
+
+
+
+
+/* --------------- */
+/* Tags */
+.cm-s-obsidian span.cm-hashtag-begin,
+.cm-s-obsidian span.cm-hashtag-end,
+a.tag {
+    color: var(--text-tag);
+    text-decoration: underline;
+}
+/* --------------- */
+
+
+/* --------------- */
+/* Bullet Point Relationship Lines */
+.cm-hmd-list-indent .cm-tab, ul ul { position: relative; }
+.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+ content:'';
+ border-left: 1px solid rgba(0, 122, 255, 0.25);
+ position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before { left: 0; top: -5px; bottom: -4px;
+}
+ul ul::before { left: -11px; top: 0; bottom: 0;
+}
+/* --------------- */
+
+
+
+/* --------------- */
+/* Cursor color in normal vim mode and opacity */
+.cm-fat-cursor .CodeMirror-cursor,
+.cm-animate-fat-cursor {
+  width: 0.5em;
+  background: var(--vim-cursor);
+  opacity: 50% !important;
+}
+
+
+/* --------------- */
+/* Active gutter linenumber color */
+div .CodeMirror-activeline-gutter {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+/* --------------- */
+
+
+/* Stylish blockquotes */
+/* Add quotation character before quote */
+blockquote:before {
+  font: 14px/20px italic Times, serif;
+  content: "“";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote p { display: inline; }
+
+/* Auto fade note controls */
+.view-header:not(:hover) .view-actions {
+  opacity: 0.1;
+  transition: opacity .25s ease-in-out;
+}
+/* --------------- */
+
+
+
+/* --------------- */
+/* Code */
+.theme-dark :not(pre) > code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light :not(pre) > code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  background-color:var(--background-primary-alt);
+}
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  text-shadow:none;
+}
+
+.cm-s-obsidian .hmd-fold-html-stub,
+.cm-s-obsidian .hmd-fold-code-stub,
+.cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian .cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian .HyperMD-hr,
+.cm-s-obsidian .cm-hmd-frontmatter,
+.cm-s-obsidian .cm-hmd-orgmode-markup,
+.cm-s-obsidian .cm-formatting-code,
+.cm-s-obsidian .cm-math, .cm-s-obsidian span.hmd-fold-math-placeholder,
+.cm-s-obsidian .CodeMirror-linewidget kbd,
+.cm-s-obsidian .hmd-fold-html kbd
+.CodeMirror-code {
+  font-family:var(--font-monospace);
+}
+/* --------------- */
+
+
+
+/* --------------- */
+/* Update selected text color */
+div.CodeMirror-selected{
+  background: var(--text-highlight-bg) !important;
+  color: var(--text-highlight-fg) !important;
+  opacity: 80% !important;
+}
+/* --------------- */
