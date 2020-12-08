@@ -129,7 +129,7 @@
 #------------------------------------------------------------------------------
 
 ## Whether to display a banner upon starting IPython.
-c.TerminalIPythonApp.display_banner = False
+# c.TerminalIPythonApp.display_banner = False
 
 ## If a command or file is given via the command-line, e.g. 'ipython foo.py',
 #  start an interactive shell after executing the file or command.
@@ -284,24 +284,24 @@ c.InteractiveShell.automagic = True
 # TerminalInteractiveShell(InteractiveShell) configuration
 #------------------------------------------------------------------------------
 
-## Autoformatter to reformat Terminal code. Can be `'black'` or `None`
-c.TerminalInteractiveShell.autoformatter = 'black'
+# ## Autoformatter to reformat Terminal code. Can be `'black'` or `None`
+# c.TerminalInteractiveShell.autoformatter = 'black'
 
-## Set to confirm when you try to exit IPython with an EOF (Control-D in Unix,
-#  Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
-#  direct exit without any confirmation.
-c.TerminalInteractiveShell.confirm_exit = False
+# ## Set to confirm when you try to exit IPython with an EOF (Control-D in Unix,
+# #  Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
+# #  direct exit without any confirmation.
+# c.TerminalInteractiveShell.confirm_exit = False
 
-## Options for displaying tab completions, 'column', 'multicolumn', and
-#  'readlinelike'. These options are for `prompt_toolkit`, see `prompt_toolkit`
-#  documentation for more information.
-c.TerminalInteractiveShell.display_completions = 'readlinelike'
+# ## Options for displaying tab completions, 'column', 'multicolumn', and
+# #  'readlinelike'. These options are for `prompt_toolkit`, see `prompt_toolkit`
+# #  documentation for more information.
+# c.TerminalInteractiveShell.display_completions = 'readlinelike'
 
-## Shortcut style to use at the prompt. 'vi' or 'emacs'.
-c.TerminalInteractiveShell.editing_mode = 'vi'
+# ## Shortcut style to use at the prompt. 'vi' or 'emacs'.
+# c.TerminalInteractiveShell.editing_mode = 'vi'
 
-## Set the editor used by IPython (default to $EDITOR/vi/notepad).
-c.TerminalInteractiveShell.editor = 'subl3'
+# ## Set the editor used by IPython (default to $EDITOR/vi/notepad).
+# c.TerminalInteractiveShell.editor = 'subl3'
 
 ## Allows to enable/disable the prompt toolkit history search
 #c.TerminalInteractiveShell.enable_history_search = True
@@ -626,3 +626,29 @@ c.TerminalInteractiveShell.editor = 'subl3'
 #c.StoreMagics.autorestore = False
 
 c.ConsoleWidget.font_family = 'Mononoki'
+
+## Whether to display a banner upon starting IPython.
+c.TerminalIPythonApp.display_banner = True
+
+## Autoformatter to reformat Terminal code. Can be `'black'` or `None`
+c.TerminalInteractiveShell.autoformatter = 'black'
+
+## Set to confirm when you try to exit IPython with an EOF (Control-D in Unix,
+#  Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
+#  direct exit without any confirmation.
+c.TerminalInteractiveShell.confirm_exit = False
+
+## Options for displaying tab completions, 'column', 'multicolumn', and
+#  'readlinelike'. These options are for `prompt_toolkit`, see `prompt_toolkit`
+#  documentation for more information.
+c.TerminalInteractiveShell.display_completions = 'multicolumn'
+
+## Shortcut style to use at the prompt. 'vi' or 'emacs'.
+c.TerminalInteractiveShell.editing_mode = 'vi'
+
+## Enable vi (v) or Emacs (C-X C-E) shortcuts to open an external editor. This is
+#  in addition to the F2 binding, which is always enabled.
+c.TerminalInteractiveShell.extra_open_editor_shortcuts = False
+
+## Set the editor used by IPython (default to $EDITOR/vi/notepad).
+c.TerminalInteractiveShell.editor = 'subl'
