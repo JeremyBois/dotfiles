@@ -105,9 +105,12 @@ complete -cf which
 ### Local Python environment
 export PATH=$PATH:/home/pampi/.local/bin:/home/pampi/bin
 
+### Haskell ghcup-hs
+export PATH=$PATH:/home/pampi/.ghcup/bin
+
 
 #-------------------------
-# Personnal Environnement
+# Passc
 #-------------------------
 alias passc='pass -c'
 source /usr/share/bash-completion/completions/pass

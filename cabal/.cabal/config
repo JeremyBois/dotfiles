@@ -9,8 +9,11 @@
 --
 -- This config file was generated using the following versions
 -- of Cabal and cabal-install:
--- Cabal library version: 3.0.1.0
--- cabal-install version: 3.0.0.0
+-- Cabal library version: 3.2.0.0
+-- cabal-install version: 3.2.0.0
+
+
+-- Now using ghcup to manage haskell with CABAL (static linking is back)
 
 
 repository hackage.haskell.org
@@ -25,16 +28,11 @@ repository hackage.haskell.org
 -- ignore-expiry: False
 -- http-transport:
 -- nix: False
+-- local-no-index-repo:
 remote-repo-cache: /home/pampi/.cabal/packages
 -- local-repo:
 -- logs-dir: /home/pampi/.cabal/logs
-
--- https://github.com/haskell/haskell-language-server/issues/434
 world-file: /home/pampi/.cabal/world
-executable-dynamic: True
-library-vanilla: False
-shared: True
-
 -- store-dir:
 -- verbose: 1
 -- compiler: ghc
@@ -43,8 +41,11 @@ shared: True
 -- with-hc-pkg:
 -- program-prefix:
 -- program-suffix:
+-- library-vanilla: True
 -- library-profiling:
+-- shared:
 -- static:
+-- executable-dynamic: False
 -- executable-static: False
 -- profiling:
 -- executable-profiling:
@@ -89,6 +90,7 @@ extra-prog-path: /home/pampi/.cabal/bin
 -- max-backjumps: 4000
 -- reorder-goals: False
 -- count-conflicts: True
+-- fine-grained-conflicts: True
 -- minimize-conflict-set: False
 -- independent-goals: False
 -- shadow-installed-packages: False
@@ -109,11 +111,12 @@ remote-build-reporting: anonymous
 -- per-component: True
 -- one-shot: False
 -- run-tests:
-jobs: $ncpus
+jobs: 4
 -- keep-going: False
 -- offline: False
 -- project-file:
 -- lib: False
+-- ignore-project: False
 -- package-env:
 -- overwrite-policy:
 -- install-method:
@@ -125,8 +128,8 @@ installdir: /home/pampi/.cabal/bin
 
 haddock
   -- keep-temp-files: False
-  -- hoogle: False
-  -- html: False
+  hoogle: True
+  html: True
   -- html-location:
   -- executables: False
   -- tests: False
@@ -135,7 +138,7 @@ haddock
   -- all:
   -- internal: False
   -- css:
-  -- hyperlink-source: False
+  hyperlink-source: True
   -- quickjump: False
   -- hscolour-css:
   -- contents-location:
@@ -209,16 +212,16 @@ program-locations
   -- uhc-location:
 
 program-default-options
-  -- https://github.com/haskell/haskell-language-server/issues/434
-  -- https://github.com/haskell/vscode-haskell#local-documentation
-  ghc-options: -haddock -dynamic
-
   -- alex-options:
   -- ar-options:
   -- c2hs-options:
   -- cpphs-options:
   -- doctest-options:
   -- gcc-options:
+
+  -- https://github.com/haskell/vscode-haskell#local-documentation
+  ghc-options: -haddock
+
   -- ghc-pkg-options:
   -- ghcjs-options:
   -- ghcjs-pkg-options:

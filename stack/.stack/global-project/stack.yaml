@@ -7,7 +7,7 @@
 # http://docs.haskellstack.org/en/stable/yaml_configuration/
 #
 packages: []
-resolver: lts-16.19
+resolver: lts-16.25
 
 ghc-options:
   "$everything": -haddock
