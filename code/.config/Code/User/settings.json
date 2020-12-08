@@ -567,5 +567,9 @@
     "settingsSync.keybindingsPerPlatform": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "window.restoreFullscreen": true,
-    "editor.multiCursorModifier": "ctrlCmd"
+    "editor.multiCursorModifier": "ctrlCmd",
+    "breadcrumbs.filePath": "off",
+    "breadcrumbs.enabled": false,
+    "update.showReleaseNotes": false,
+    "update.mode": "none"
 }

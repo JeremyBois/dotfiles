@@ -15,7 +15,7 @@
         "key": "escape",
         "command": "removeSecondaryCursors",
         "when": "editorHasMultipleSelections"
-    }
+    },
 
 
     // SUBLIME TEXT
@@ -48,6 +48,12 @@
         "key": "ctrl+k ctrl+u",
         "command": "editor.action.transformToUppercase"
     },
+    {
+        "key": "ctrl+r",
+        "command": "workbench.action.gotoSymbol"
+    },
+    
+
     // Disable default shortcuts to avoid conflicts
     {
         "key": "ctrl+k ctrl+u",
@@ -57,6 +63,24 @@
     {
         "key": "ctrl+k u",
         "command": "-workbench.action.closeUnmodifiedEditors"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
     },
 
 
