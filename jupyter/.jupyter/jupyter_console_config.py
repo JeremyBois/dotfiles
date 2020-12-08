@@ -117,7 +117,7 @@
 #c.ZMQTerminalInteractiveShell.display_completions = 'multicolumn'
 
 ## Shortcut style to use at the prompt. 'vi' or 'emacs'.
-c.ZMQTerminalInteractiveShell.editing_mode = 'vi'
+# c.ZMQTerminalInteractiveShell.editing_mode = 'vi'
 
 ## Highlight matching brackets.
 #c.ZMQTerminalInteractiveShell.highlight_matching_brackets = True
@@ -171,7 +171,7 @@ c.ZMQTerminalInteractiveShell.editing_mode = 'vi'
 #c.ZMQTerminalInteractiveShell.other_output_prefix = 'Remote '
 
 ## Display the current vi mode (when using vi editing mode).
-#c.ZMQTerminalInteractiveShell.prompt_includes_vi_mode = True
+# c.ZMQTerminalInteractiveShell.prompt_includes_vi_mode = True
 
 ## Use simple fallback prompt. Features may be limited.
 #c.ZMQTerminalInteractiveShell.simple_prompt = False
@@ -335,6 +335,18 @@ c.ZMQTerminalInteractiveShell.editing_mode = 'vi'
 ## Username for the Session. Default is your system username.
 c.Session.username = 'Pampi'
 
+c.ConsoleWidget.font_family = 'Mononoki'
 c.JupyterConsoleApp.confirm_exit = False
 c.JupyterQtConsoleApp.display_banner = False
-c.ConsoleWidget.font_family = 'Mononoki'
+
+
+## Options for displaying tab completions, 'column', 'multicolumn', and
+#  'readlinelike'. These options are for `prompt_toolkit`, see `prompt_toolkit`
+#  documentation for more information.
+c.ZMQTerminalInteractiveShell.display_completions = 'multicolumn'
+
+## Shortcut style to use at the prompt. 'vi' or 'emacs'.
+c.ZMQTerminalInteractiveShell.editing_mode = 'vi'
+
+## Display the current vi mode (when using vi editing mode).
+c.ZMQTerminalInteractiveShell.prompt_includes_vi_mode = True
