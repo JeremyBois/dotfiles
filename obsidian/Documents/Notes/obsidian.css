@@ -15,6 +15,11 @@
     --blue:      #268bd2;
     --cyan:      #2aa198;
     --green:     #859900;
+
+    /* Search results similar to Solarized theme in sublime text */
+    --base4:     #ffe792;
+    --base04:    #010104;
+
     /* Fonts specifications */
     --font-family-editor: "Mononoki Nerd Font Mono", "Droid Sans";
     --font-family-preview: "Libre Baskerville";
@@ -74,7 +79,6 @@
     --text-on-accent: var(--base3);
     --vim-cursor: var(--base02);
     --text-border: var(--yellow);
-
 }
 
 
@@ -90,44 +94,7 @@ div.markdown-preview-view {
     font-family: var(--font-family-preview);
     font-size: var(--font-size-preview);
 }
-
-
-
 /* --------------- */
-/* Fix line padding for lists/tasks and text blocks */
-p {
-  padding: 5px 0;
-  line-height: 1.8rem;
-}
-
-ul, ol {
-  padding-left: calc(1.5em + 4px);
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-}
-
-li {
-  margin: 2px 0;
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-li > p {
-  padding: 3px 2px;
-  margin: 2px 0;
-}
-
-li > p:first-child {
-  padding-top: 0;
-  margin-top: 0;
-}
-
-li > p:last-child {
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-/* --------------- */
-
 
 
 
@@ -175,11 +142,26 @@ blockquote, .markdown-embed {
 .suggestion-item.is-selected {
     background-color: var(--background-secondary-alt);
 }
-
-
-
-
 /* --------------- */
+
+
+/* Search highlights */
+span.obsidian-search-match-highlight {
+    background: var(--base4) !important;
+    color: var(--base04) !important;
+}
+/* --------------- */
+
+
+/* Find previous / next / all buttons  and search input area */
+.document-search-button,
+.document-search-input {
+    background: var(--background-secondary) !important;
+}
+/* --------------- */
+
+
+
 /* Tags */
 .cm-s-obsidian span.cm-hashtag-begin,
 .cm-s-obsidian span.cm-hashtag-end,
@@ -190,7 +172,6 @@ a.tag {
 /* --------------- */
 
 
-/* --------------- */
 /* Bullet Point Relationship Lines */
 .cm-hmd-list-indent .cm-tab, ul ul { position: relative; }
 .cm-hmd-list-indent .cm-tab::before, ul ul::before {
@@ -205,59 +186,16 @@ ul ul::before { left: -11px; top: 0; bottom: 0;
 /* --------------- */
 
 
-
-/* --------------- */
-/* Cursor color in normal vim mode and opacity */
-.cm-fat-cursor .CodeMirror-cursor,
-.cm-animate-fat-cursor {
-  width: 0.5em;
-  background: var(--vim-cursor);
-  opacity: 50% !important;
-}
-
-
-/* --------------- */
-/* Active gutter linenumber color */
-div .CodeMirror-activeline-gutter {
-  background-color: var(--background-secondary-alt) !important;
-}
-
-/* --------------- */
-
-
-/* Stylish blockquotes */
-/* Add quotation character before quote */
-blockquote:before {
-  font: 14px/20px italic Times, serif;
-  content: "“";
-  font-size: 3em;
-  line-height: 0.1em;
-  vertical-align: -0.4em;
-}
-blockquote p { display: inline; }
-
-/* Auto fade note controls */
-.view-header:not(:hover) .view-actions {
-  opacity: 0.1;
-  transition: opacity .25s ease-in-out;
-}
-/* --------------- */
-
-
-
-/* --------------- */
-/* Code */
-.theme-dark :not(pre) > code[class*="language-"],
-.theme-dark pre[class*="language-"],
-.theme-light :not(pre) > code[class*="language-"],
-.theme-light pre[class*="language-"] {
-  background-color:var(--background-primary-alt);
-}
-.theme-dark code[class*="language-"],
-.theme-dark pre[class*="language-"],
-.theme-light code[class*="language-"],
-.theme-light pre[class*="language-"] {
-  text-shadow:none;
+/* Code block editor */
+.HyperMD-codeblock-bg
+{
+  background-color:var(--background-secondary) !important;
+  border: none !important;
+  border-radius: 0px !important;
+  border-left-width: 3px !important;
+  border-left-color: var(--background-modifier-border) !important;
+  border-left-style: solid !important;
+  margin-left: -0.3em;
 }
 
 .cm-s-obsidian .hmd-fold-html-stub,
@@ -270,21 +208,123 @@ blockquote p { display: inline; }
 .cm-s-obsidian .cm-hmd-frontmatter,
 .cm-s-obsidian .cm-hmd-orgmode-markup,
 .cm-s-obsidian .cm-formatting-code,
-.cm-s-obsidian .cm-math, .cm-s-obsidian span.hmd-fold-math-placeholder,
+.cm-s-obsidian .cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder,
 .cm-s-obsidian .CodeMirror-linewidget kbd,
 .cm-s-obsidian .hmd-fold-html kbd
 .CodeMirror-code {
   font-family:var(--font-monospace);
 }
-/* --------------- */
+
+/* Code block preview */
+.theme-dark :not(pre) > code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light :not(pre) > code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  background-color:var(--background-secondary);
+  border: none;
+  border-left-color: var(--background-modifier-border);
+  border-radius: 0px !important;
+  border-left-style: solid;
+  border-left-width: 3px;
+}
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  text-shadow:none;
+}
+/* ---------------
 
 
-
-/* --------------- */
 /* Update selected text color */
-div.CodeMirror-selected{
-  background: var(--text-highlight-bg) !important;
+div.CodeMirror-selected {
+  background: var(--background-secondary-alt) !important;
   color: var(--text-highlight-fg) !important;
   opacity: 80% !important;
+}
+/* --------------- */
+
+
+/* Auto fade note topbar controls */
+.view-header:not(:hover) .view-actions {
+  opacity: 0.1;
+  transition: opacity .25s ease-in-out;
+}
+/* --------------- */
+
+/* Cursor color in normal vim mode and opacity */
+.cm-fat-cursor .CodeMirror-cursor,
+.cm-animate-fat-cursor {
+  width: 0.5em;
+  background: var(--vim-cursor);
+  opacity: 50% !important;
+}
+/* --------------- */
+
+
+/* Active gutter linenumber color */
+div .CodeMirror-activeline-gutter {
+  background-color: var(--background-secondary-alt) !important;
+}
+/* --------------- */
+
+
+/* Disable some UX stuff */
+
+/*@TODO*/
+/* --------------- */
+
+
+/* Line */
+.markdown-preview-view hr {
+  height: 1.5em;
+  border-width:2px 0 0 0;
+}
+
+/* Stylish blockquotes */
+/* Add quotation character before quote */
+blockquote:before {
+  font: 14px/20px italic Times, serif;
+  /*content: "“";*/
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote p { display: inline; }
+/* --------------- */
+
+
+/* Fix line padding for lists/tasks and text blocks */
+p {
+  padding: 5px 0;
+  line-height: 1.8rem;
+}
+
+ul, ol {
+  padding-left: calc(1.5em + 4px);
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+
+li {
+  margin: 2px 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+li > p {
+  padding: 3px 2px;
+  margin: 2px 0;
+}
+
+li > p:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+li > p:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 /* --------------- */
