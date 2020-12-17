@@ -1,5 +1,5 @@
 {
-    "haskell_build_tool": "stack",
+    "haskell_build_tool": "cabal-new-build",
 
     // Enable auto check on save
     "enable_auto_check": false,
