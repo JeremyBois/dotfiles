@@ -571,5 +571,6 @@
     "breadcrumbs.filePath": "off",
     "breadcrumbs.enabled": false,
     "update.showReleaseNotes": false,
-    "update.mode": "none"
+    "update.mode": "none",
+    "haskell.updateBehavior": "never-check"
 }
