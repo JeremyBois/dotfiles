@@ -219,8 +219,27 @@ program-default-options
   -- doctest-options:
   -- gcc-options:
 
-  -- https://github.com/haskell/vscode-haskell#local-documentation
-  ghc-options: -haddock
+  ghc-options:
+    -- https://github.com/haskell/vscode-haskell#local-documentation
+    -haddock
+    -- https://kowainik.github.io/posts/2019-02-06-style-guide#ghc-options
+    -Wall
+    -Wcompat
+    -Widentities
+    -Wincomplete-uni-patterns
+    -Wincomplete-record-updates
+    -Wredundant-constraints
+    -Wmissing-export-lists
+    -Wpartial-fields
+    -Wmissing-deriving-strategies
+    -Wunused-packages
+    -- Cleaner outputs
+    -fhide-source-paths
+    -freverse-errors
+    -- Create hie informations
+    -- -fwrite-ide-info
+    -- -hiedir=.hie
+
 
   -- ghc-pkg-options:
   -- ghcjs-options:
