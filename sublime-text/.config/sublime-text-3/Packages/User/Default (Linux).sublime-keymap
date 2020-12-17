@@ -4,11 +4,9 @@
     ///////////////////////  Navigation  ///////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
 
-    // // Change focus group
-    { "keys": ["ctrl+alt+w", "left"], "command": "focus_group", "args": { "group": 0 } },
-    { "keys": ["ctrl+alt+w", "right"], "command": "focus_group", "args": { "group": 1 } },
-    { "keys": ["ctrl+alt+w", "up"], "command": "focus_group", "args": { "group": 2 } },
-    { "keys": ["ctrl+alt+w", "down"], "command": "focus_group", "args": { "group": 3 } },
+    // Change focus group
+    // Default keys
+    // ctrl+1, ctrl+2, ...
 
     // Toogle sideBar
     { "keys": ["alt+x"], "command": "toggle_side_bar" },
@@ -19,57 +17,16 @@
     // Toggle cmdPanel
     { "keys": ["ctrl+,"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 
-    // Just one layout
-    {
-        "keys": ["ctrl+alt+w", "h"],
-        "command": "set_layout",
-        "args":
-        {
-            "cols": [0.0, 1.0],
-            "rows": [0.0, 1.0],
-            "cells": [[0, 0, 1, 1]]
-        }
-    },
+    // Control layout using default
+    // --> Vertical
+    // shift+alt+"2"
+    // shift+alt+"3"
+    // shift+alt+"4"
+    // --> Horizontal
+    // shift+alt+"9"
+    // shift+alt+"8"
+    // shift+alt+"7"
 
-    // Vertical split (2)
-    {
-        "keys": ["ctrl+alt+w", "j"],
-        "command": "set_layout",
-        "args":
-        {
-            "cols": [0.0, 0.5, 1.0],
-            "rows": [0.0, 1.0],
-            "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
-        }
-    },
-
-    // Horizontal split (2)
-    {
-        "keys": ["ctrl+alt+w", "k"],
-        "command": "set_layout",
-        "args":
-        {
-            "cols": [0.0, 1.0],
-            "rows": [0.0, 0.5, 1.0],
-            "cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
-        }
-    },
-
-    // Grid split (4)
-    {
-        "keys": ["ctrl+alt+w", "l"],
-        "command": "set_layout",
-        "args":
-        {
-            "cols": [0.0, 0.5, 1.0],
-            "rows": [0.0, 0.5, 1.0],
-            "cells":
-            [
-                [0, 0, 1, 1], [1, 0, 2, 1],
-                [0, 1, 1, 2], [1, 1, 2, 2]
-            ]
-        }
-    },
 
     // Move quickly between references
     { "keys": ["alt+k"], "command": "jump_back" },
