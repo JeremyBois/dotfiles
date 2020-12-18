@@ -27,30 +27,50 @@
 
 let mapleader=,
 
+" Enable smartcase
+" https://blog.gerardroche.com/2020/12/11/the-curious-case-of-vim-search/
+:set ignorecase
+:set smartcase
 
-" Redo with U instead of Ctrl+R
-nnoremap U <C-r>
+
+" Origami
+nnoremap <leader>. :ToggleZoomPane fraction=0.9<CR>
+nnoremap <leader>k :DestroyPane direction=self<CR>
+
+
+
+" Redo with U or Ctrl+y instead of Ctrl+R
+" Undo with u or Ctrl+z
+nnoremap U     <C-r>
+nnoremap <C-y> <C-r>
+nnoremap <C-z> u
 
 " Quick back to normal mode (<C-c> or CapsLock or Escape)
 
 " Easier shortcut to trigger command
 nnoremap <space> :
 
-" Visually select all content
+" " Visually select all content
 nnoremap <leader>a ggvG
+nnoremap <C-a> ggvG
 
-" Quick save
-noremap <Leader>s :Save<CR>
-noremap <Leader>S :PromptSaveAs<CR>
+" " Quick save
+nnoremap <Leader>s :Save<CR>
+" nnoremap <C-s> :Save<CR>
+nnoremap <Leader>S :PromptSaveAs<CR>
+" nnoremap <C-S-s> :PromptSaveAs<CR>
 
-" Quick close
-noremap <Leader>q :Close<CR>
+" " Quick close
+nnoremap <Leader>q :Close<CR>
+" nnoremap <C-w>     :Close<CR>
 
-" Quick restore
-noremap <Leader>t :ReopenLastFile<CR>
+" " Quick restore
+nnoremap <Leader>t :ReopenLastFile<CR>
+" nnoremap <C-S-t>   :ReopenLastFile<CR>
 
-" Quick file
-noremap <Leader>n :NewFile<CR>
+" " Quick new file
+nnoremap <Leader>n :NewFile<CR>
+" nnoremap <C-n>     :NewFile<CR>
 
 
 " Multiple cursors like in sublime multi selection
@@ -60,24 +80,25 @@ snoremap <C-p> k
 snoremap <C-k> l
 snoremap i <Esc>i
 
+" Search without regex
+nnoremap <leader>/ n/\V
+nnoremap <leader>? n?\V
 
-" Search normal (no regex syntax)
-" ?\V or /\V
 
-
-" Cut and delete does not store data in a register
+" Delete does not store data in a register
 nnoremap x "_x
-nnoremap d "_d
-nnoremap D "_D
-vnoremap d "_d
 " Actual cut must be done using leader first
-nnoremap <leader>d "+d
-nnoremap <leader>D "+D
-vnoremap <leader>d "+d
-" Actual delete must be done using leader first
 nnoremap <leader>x "+x
 vnoremap <leader>x "+x
 
+" Delete cut text to system register
+nnoremap d "+d
+nnoremap D "+D
+vnoremap d "+d
+" To avoid to fill register leader key must be used
+nnoremap <leader>d "_d
+nnoremap <leader>D "_D
+vnoremap <leader>d "_d
 
 " Store in clipboard
 vnoremap y "+y
@@ -92,6 +113,9 @@ nnoremap p "+p
 nnoremap <leader>o o<ESC>
 nnoremap <leader>O O<ESC>
 
+" " I like using H and L for beginning/end of line
+" nmap H ^
+" nmap L $
 
 " Folds
 nnoremap zc :Fold<CR>

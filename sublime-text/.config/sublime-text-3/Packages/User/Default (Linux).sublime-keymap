@@ -19,13 +19,13 @@
 
     // Control layout using default
     // --> Vertical
-    // shift+alt+"2"
-    // shift+alt+"3"
-    // shift+alt+"4"
+    // shift+Alt+"2"
+    // shift+Alt+"3"
+    // shift+Alt+"4"
     // --> Horizontal
-    // shift+alt+"9"
-    // shift+alt+"8"
-    // shift+alt+"7"
+    // shift+Alt+"9"
+    // shift+Alt+"8"
+    // shift+Alt+"7"
 
 
     // Move quickly between references
@@ -54,8 +54,6 @@
     // ///////////////////////// Intellisense /////////////////////////////////////
     // ////////////////////////////////////////////////////////////////////////////
 
-
-
     // When coding using Python
     {
         "command": "anaconda_goto", "keys": ["f12"], "context": [
@@ -63,7 +61,7 @@
         ]
     },
     {
-        "command": "anaconda_find_usages", "keys": ["shift+f12"], "context": [
+        "command": "anaconda_find_usages", "keys": ["shift+F12"], "context": [
             {"key": "selector", "operator": "equal", "operand": "source.python"}
         ]
     },
@@ -80,7 +78,7 @@
     //         {"key" : "selector", "operator": "equal", "operand": "source.cs"}
     //     ]
     // },
-    // {"command": "omni_sharp_find_usages", "keys": ["shift+f12"],
+    // {"command": "omni_sharp_find_usages", "keys": ["shift+F12"],
     //     "context": [
     //         {"key" : "selector", "operator": "equal", "operand": "source.cs"}
     //     ]
@@ -131,5 +129,28 @@
         "command": "_enter_normal_mode",
         "args": {"mode": "mode_insert"},
         "context": [{"key": "vi_insert_mode_aware"}]
-    }
+    },
+
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////// Origami /////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    { "keys": ["ctrl+k", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+k", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+k", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+k", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+
+    { "keys": ["ctrl+k", "ctrl+k"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+k", "ctrl+l"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+k", "ctrl+j"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+k", "ctrl+h"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+
+    { "keys": ["ctrl+k", "alt+k"], "command": "create_pane_with_cloned_file", "args": {"direction": "up"} },
+    { "keys": ["ctrl+k", "alt+l"], "command": "create_pane_with_cloned_file", "args": {"direction": "right"} },
+    { "keys": ["ctrl+k", "alt+j"], "command": "create_pane_with_cloned_file", "args": {"direction": "down"} },
+    { "keys": ["ctrl+k", "alt+h"], "command": "create_pane_with_cloned_file", "args": {"direction": "left"} },
+
+    { "keys": ["ctrl+k", "K"], "command": "create_pane", "args": {"direction": "up", "give_focus": true} },
+    { "keys": ["ctrl+k", "L"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
+    { "keys": ["ctrl+k", "J"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
+    { "keys": ["ctrl+k", "H"], "command": "create_pane", "args": {"direction": "left", "give_focus": true} },
 ]
