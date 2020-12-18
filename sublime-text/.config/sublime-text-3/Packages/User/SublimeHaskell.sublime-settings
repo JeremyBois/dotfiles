@@ -13,4 +13,11 @@
     "enable_hdocs": true,
 
     "auto_completion_popup": true,
+
+    // Run a code indenter/prettyfier after save.
+    "prettify_on_save": true,
+
+    // Enable hdocs, disabled by default since 'hdocs' is not on hackage yet
+    // It can be manually installed from http://github.com/mvoidex/hdocs
+    "enable_hdocs": true,
 }
