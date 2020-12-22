@@ -11,6 +11,14 @@
 " omap, onoremap, ounmap          Operator pending mode
 
 
+" MEMO
+" ----------------
+" Surround plugin
+" ## Replace: cs<old><new>
+" ## Add:     ysiw<new>
+" ## Delete:  ds<old>
+
+
 " Motion
 " https://medium.com/@schtoeffel/you-don-t-need-more-than-one-cursor-in-vim-2c44117d51db
 " ## Replace: cgn <new string>
@@ -18,13 +26,14 @@
 "                                             --> n (move to next)
 "                                             --> u (undo last action)
 
-" Surround
-" ## Replace: cs<old><new>
-" ## Add:     ysiw<new>
-" ## Delete:  ds<old>
 
 
+" CONVENIENCE
+" ----------------
+"Make ";" synonymous with ":" to enter commands
+nnoremap ; :
 
+" leader using ","
 let mapleader=,
 
 " Enable smartcase
@@ -32,12 +41,45 @@ let mapleader=,
 :set ignorecase
 :set smartcase
 
+" Visually select all content
+nnoremap <leader>a ggvG
 
-" Origami
-nnoremap <leader>. :ToggleZoomPane fraction=0.9<CR>
-nnoremap <leader>k :DestroyPane direction=self<CR>
+" Newline without leaving normal mode
+nnoremap <leader>o o<ESC>
+nnoremap <leader>O O<ESC>
+
+" Search without regex
+nnoremap <leader>/ n/\V
+nnoremap <leader>? n?\V
+
+" Be able to delete without poluting a register
+" Delete without storing
+nnoremap <leader>d "_d
+nnoremap <leader>D "_D
+vnoremap <leader>d "_d
+" Store and paste in clipboard
+" <C-c> and <C-v>
+" Or using leader to populate clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+nnoremap <leader>Y "+Y
+nnoremap <leader>y "+y
 
 
+" SUBLIME COMMANDS
+" ----------------
+" Quick save
+nnoremap <leader>s :Save<CR>
+nnoremap <leader>S :PromptSaveAs<CR>
+
+" Quick close
+nnoremap <leader>q :Close<CR>
+
+" Quick restore
+nnoremap <leader>t :ReopenLastFile<CR>
+
+" Quick new file
+nnoremap <leader>n :NewFile<CR>
 
 " Redo with U or Ctrl+y instead of Ctrl+R
 " Undo with u or Ctrl+z
@@ -45,91 +87,45 @@ nnoremap U     <C-r>
 nnoremap <C-y> <C-r>
 nnoremap <C-z> u
 
-" Quick back to normal mode (<C-c> or CapsLock or Escape)
-
-" Easier shortcut to trigger command
-nnoremap <space> :
-
-" " Visually select all content
-nnoremap <leader>a ggvG
-nnoremap <C-a> ggvG
-
-" " Quick save
-nnoremap <Leader>s :Save<CR>
-" nnoremap <C-s> :Save<CR>
-nnoremap <Leader>S :PromptSaveAs<CR>
-" nnoremap <C-S-s> :PromptSaveAs<CR>
-
-" " Quick close
-nnoremap <Leader>q :Close<CR>
-" nnoremap <C-w>     :Close<CR>
-
-" " Quick restore
-nnoremap <Leader>t :ReopenLastFile<CR>
-" nnoremap <C-S-t>   :ReopenLastFile<CR>
-
-" " Quick new file
-nnoremap <Leader>n :NewFile<CR>
-" nnoremap <C-n>     :NewFile<CR>
-
-
-" Multiple cursors like in sublime multi selection
+" Sublime <C-d> using motion
 nnoremap <C-d> gh
 snoremap <C-d> j
 snoremap <C-p> k
 snoremap <C-k> l
 snoremap i <Esc>i
 
-" Search without regex
-nnoremap <leader>/ n/\V
-nnoremap <leader>? n?\V
+" Focus Folder Tree
+" Opened using <M-x>
+" Go back to previous file with <Esc>
+nnoremap <leader>x <C-0>
 
 
-" Delete does not store data in a register
-nnoremap x "_x
-" Actual cut must be done using leader first
-nnoremap <leader>x "+x
-vnoremap <leader>x "+x
 
-" Delete cut text to system register
-nnoremap d "+d
-nnoremap D "+D
-vnoremap d "+d
-" To avoid to fill register leader key must be used
-nnoremap <leader>d "_d
-nnoremap <leader>D "_D
-vnoremap <leader>d "_d
-
-" Store in clipboard
-vnoremap y "+y
-nnoremap y "+y
-" Paste from clipboard
-vnoremap p "+p
-nnoremap p "+p
-" Copy to clipboard (not needed because everything is store to clipboard now)
-" vnoremap <C-c> "+y
-
-" Newline without leaving normal mode
-nnoremap <leader>o o<ESC>
-nnoremap <leader>O O<ESC>
-
-" " I like using H and L for beginning/end of line
-" nmap H ^
-" nmap L $
-
-" Folds
-nnoremap zc :Fold<CR>
-nnoremap zo :Unfold<CR>
-nnoremap zM :FoldAll<CR>
-nnoremap zR :UnfoldAll<CR>
-
-
+" PLUGINS SUBLIME
+" ----------------
 " AceJump plugin
-" https://github.com/ice9js/ace-jump-sublime
-nnoremap <leader><leader>a :AceJumpAfter<CR>
-nnoremap <leader><leader>c :AceJumpChar<CR>
-nnoremap <leader><leader>d :AceJumpAddCursor<CR>
-nnoremap <leader><leader>i :AceJumpWithinLine<CR>
-nnoremap <leader><leader>l :AceJumpLine<CR>
-nnoremap <leader><leader>s :AceJumpSelect<CR>
-nnoremap <leader><leader>w :AceJumpWord<CR>
+nnoremap <leader>c :AceJumpChar<CR>
+nnoremap <leader>i :AceJumpWithinLine<CR>
+nnoremap <leader>l :A,\ceJumpLine<CR>
+nnoremap <leader>w :AceJumpWord<CR>
+
+
+" Origami plugin
+nnoremap <leader>z :ToggleZoomPane fraction=0.9<CR>
+nnoremap <leader>kk :DestroyPane direction=self<CR>
+
+
+" LSP plugin
+
+" Show information (overlap with SublimeHaskell)
+nnoremap K <C-k><C-i>
+
+" GoTo code navigation.
+" nmap <silent> gd <Plug>(coc-definition)
+nnoremap gd :LspSymbolDefinition<CR>
+" " nmap <silent> gy <Plug>(coc-type-definition)
+nnoremap gy :LspSymbolTypeDefinition<CR>
+" " nmap <silent> gi <Plug>(coc-implementation)
+nnoremap gi :LspSymbolImplementation<CR>
+" " nmap <silent> gr <Plug>(coc-references)
+nnoremap gr :LspTypeReferences<CR>

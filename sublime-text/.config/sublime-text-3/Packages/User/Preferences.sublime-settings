@@ -74,7 +74,7 @@
 	"caret_extra_width": 1,
 	"caret_style": "smooth",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/Theme/LightSolarized.tmTheme",
+	"color_scheme": "Packages/User/Theme/DarkSolarized.tmTheme",
 	"dictionary": "Packages/Language - French - Français/fr_FR.dic",
 	"drag_text": false,
 	"draw_centered": true,
@@ -167,11 +167,12 @@
 		"bin"
 	],
 	"font_face": "Mononoki Nerd Font Mono",
-	"font_size": 20,
+	"font_size": 14,
 	"highlight_line": false,
 	"ignored_packages":
 	[
 		"Six",
+		"SublimeHaskell",
 		"Vintage",
 		"Vintageous"
 	],
@@ -223,14 +224,18 @@
 	"update_check": false,
 	"vintageous_handle_keys":
 	{
-		"<C-s>": false,
-		"<C-S-s>": false,
-		"<C-t>": false,
+		"<C-S>": false,
+		"<C-T>": false,
+		"<C-c>": false,
 		"<C-f>": false,
 		"<C-h>": false,
-		"<C-s>": false,
-		"<C-w>": false,
 		"<C-o>": false,
+		"<C-p>": false,
+		"<C-r>": false,
+		"<C-s>": false,
+		"<C-v>": false,
+		"<C-w>": false,
+		"<C-x>": false
 	},
 	"vintageous_use_ctrl_keys": true,
 	"wide_caret": true,
