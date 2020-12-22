@@ -1,0 +1,32 @@
+{
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": [
+        "--lsp"
+      ],
+      "rootPatterns": [
+          "*.cabal",
+          "stack.yaml",
+          "cabal.project",
+          "package.yaml",
+          "hie.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "lhaskell",
+        "haskell"
+      ],
+      "initializationOptions": {
+
+        "languageServerHaskell": {
+          "hlintOn": true,
+          "maxNumberOfProblems": 100,
+          "formattingProvider": "ormolu",
+          "formatOnImportOn": true
+        }
+      }
+    }
+  }
+}
