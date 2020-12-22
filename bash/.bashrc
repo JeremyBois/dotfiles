@@ -62,7 +62,7 @@ alias mirrorSite='wget -r -p -U Mozilla -e robots=off --mirror --convert-links -
 alias evince='nohup evince >/dev/null'
 
 # Touchpad switcher
-alias togglePad='/home/pampi/Documents/Logiciels/Utilities/touchpadSwitcher.sh'
+alias togglePad='~/Documents/Logiciels/Utilities/touchpadSwitcher.sh'
 
 # Restart cinnamon
 alias restartCinnamon='nohup cinnamon --replace > /dev/null 2>&1 &'
@@ -91,22 +91,17 @@ export HISTSIZE=10000
 ## Friendly editor in place of vi
 export EDITOR=nvim
 
-
-#-------------------------
-# Autocomplete commands
-#-------------------------
-### Which autocomplete
-complete -cf which
-
-
 #-------------------------
 # Personnal Environnement
 #-------------------------
-### Local Python environment
-export PATH=$PATH:/home/pampi/.local/bin:/home/pampi/bin
+### Home
+export PATH=$PATH:~/.local/bin:~/bin
 
-### Haskell ghcup-hs
-export PATH=$PATH:/home/pampi/.ghcup/bin
+### ghcup-hs
+export PATH=$PATH:~/.ghcup/bin
+
+### Cabal
+export PATH=$PATH:~/.cabal/bin
 
 
 #-------------------------
@@ -136,7 +131,7 @@ function omg_prompt_callback() {
 }
 
 
-source /home/pampi/.oh-my-git/prompt.sh
+source ~/.oh-my-git/prompt.sh
 
 
 
@@ -187,6 +182,17 @@ export FZF_CTRL_T_OPTS="--preview-window right:50%:border --preview '(cat {} || 
 # ALT-C  --> CD in any folder inside root from any location
 export FZF_ALT_C_COMMAND="fd --type d --hidden --exclude '.git' --exclude '.svn' . /"
 export FZF_ALT_C_OPTS="--preview-window right:50%:border --preview '(tree -C {}) 2> /dev/null | head -200'"
+
+
+
+#-------------------------
+# Autocomplete commands
+#-------------------------
+### Which autocomplete
+complete -cf which
+
+### Stack
+eval "$(stack --bash-completion-script stack)"
 
 
 
