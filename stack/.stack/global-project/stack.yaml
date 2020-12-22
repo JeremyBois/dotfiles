@@ -6,8 +6,26 @@
 # For more information about stack's configuration, see
 # http://docs.haskellstack.org/en/stable/yaml_configuration/
 #
+
+# Ghc version == 8.8.4
 packages: []
 resolver: lts-16.25
 
+# https://github.com/haskell/vscode-haskell#local-documentation
+# https://kowainik.github.io/posts/2019-02-06-style-guide#ghc-options
 ghc-options:
-  "$everything": -haddock
+  "$everything":
+    -haddock
+    -haddock
+    -Wall
+    -Wcompat
+    -Widentities
+    -Wincomplete-uni-patterns
+    -Wincomplete-record-updates
+    -Wredundant-constraints
+    -Wmissing-export-lists
+    -Wpartial-fields
+    -Wmissing-deriving-strategies
+    -Wunused-imports
+    -fhide-source-paths
+    -freverse-errors
