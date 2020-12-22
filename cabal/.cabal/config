@@ -111,7 +111,7 @@ remote-build-reporting: anonymous
 -- per-component: True
 -- one-shot: False
 -- run-tests:
-jobs: 4
+jobs: $ncpus
 -- keep-going: False
 -- offline: False
 -- project-file:
@@ -232,7 +232,7 @@ program-default-options
     -Wmissing-export-lists
     -Wpartial-fields
     -Wmissing-deriving-strategies
-    -Wunused-packages
+    -Wunused-imports
     -- Cleaner outputs
     -fhide-source-paths
     -freverse-errors
