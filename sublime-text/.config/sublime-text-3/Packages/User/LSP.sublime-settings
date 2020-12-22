@@ -1,15 +1,26 @@
 {
+	"auto_show_diagnostics_panel_level": 2,
 	"clients":
 	{
 		"haskell-language-server":
 		{
 			"command":
 			[
-				"/home/pampi/.ghcup/bin/haskell-language-server-wrapper",
+				"haskell-language-server-wrapper",
 				"--lsp"
 			],
-			// SublimeHaskell has a better integration
-			"enabled": true,
+			"enabled": false,
+			"initializationOptions":
+			{
+				"languageServerHaskell":
+				{
+					"completionSnippetsOn": true,
+					"hlintOn": true,
+					"maxNumberOfProblems": 100,
+					"formattingProvider": "ormolu",
+					"formatOnImportOn": true
+				}
+			},
 			"languageId": "haskell",
 			"scopes":
 			[
@@ -22,10 +33,11 @@
 			]
 		}
 	},
-	// ghc and haskell-language-server should be
-	// in global path for this to work
-	// --> /bin/
+	"diagnostics_gutter_marker": "sign",
+	"document_highlight_style": "box",
 	"log_debug": false,
 	"log_payloads": false,
-	"log_stderr": false
+	"log_stderr": false,
+	"show_code_actions_bulb": true,
+	"show_symbol_action_links": true
 }

@@ -1,5 +1,4 @@
 [
-
     ////////////////////////////////////////////////////////////////////////////
     ///////////////////////  Navigation  ///////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -61,7 +60,7 @@
         ]
     },
     {
-        "command": "anaconda_find_usages", "keys": ["shift+F12"], "context": [
+        "command": "anaconda_find_usages", "keys": ["shift+f12"], "context": [
             {"key": "selector", "operator": "equal", "operand": "source.python"}
         ]
     },
@@ -105,7 +104,7 @@
 
     // When coding using Haskell
     {
-        "keys": ["ctrl+alt+r"],
+        "keys": ["ctrl+alt+m"],
         "context": [
             { "key": "haskell_source" },
             { "key": "scanned_source" },
@@ -124,12 +123,7 @@
     ////////////////////////////////////////////////////////////////////////////
     ///////////////////////////// Vintageous ///////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-    {
-        "keys": ["j", "j"],
-        "command": "_enter_normal_mode",
-        "args": {"mode": "mode_insert"},
-        "context": [{"key": "vi_insert_mode_aware"}]
-    },
+
 
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////// Origami /////////////////////////////////////
@@ -153,4 +147,26 @@
     { "keys": ["ctrl+k", "L"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
     { "keys": ["ctrl+k", "J"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
     { "keys": ["ctrl+k", "H"], "command": "create_pane", "args": {"direction": "left", "give_focus": true} },
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////// SUBLIME-HASKELL ///////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    // Currently not used in favor of LSP and HLS
+
+
+    ////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////// LSP ///////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    // Document Symbols (a replacement for ST's "Goto Symbol")
+    {"keys": ["ctrl+r"], "command": "lsp_document_symbols", "context": [{"key": "setting.lsp_active"}]},
+
+    // Get information about the context under cursor
+    {"keys": ["ctrl+k", "ctrl+i"], "command": "lsp_hover", "context": [{"key": "setting.lsp_active"}]},
+
+    // Go To Definition
+    {"keys": ["f12"], "command": "lsp_symbol_definition", "context": [{"key": "setting.lsp_active"}]},
+
+     // Find Symbol References
+    { "keys": ["shift+f12"], "command": "lsp_symbol_references", "context": [{"key": "setting.lsp_active"}]},
 ]

@@ -1,4 +1,5 @@
 {
+    // Default builder
     "haskell_build_tool": "cabal-new-build",
 
     // Enable auto check on save
@@ -16,8 +17,4 @@
 
     // Run a code indenter/prettyfier after save.
     "prettify_on_save": true,
-
-    // Enable hdocs, disabled by default since 'hdocs' is not on hackage yet
-    // It can be manually installed from http://github.com/mvoidex/hdocs
-    "enable_hdocs": true,
 }
