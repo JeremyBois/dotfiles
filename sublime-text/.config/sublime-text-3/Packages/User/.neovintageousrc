@@ -30,8 +30,9 @@
 
 " CONVENIENCE
 " ----------------
-"Make ";" synonymous with ":" to enter commands
-nnoremap ; :
+" Make ";" synonymous with ":" to enter commands
+" Conflict with Sneak/motion next
+" nnoremap ; :
 
 " leader using ","
 let mapleader=,
@@ -101,12 +102,12 @@ nnoremap <leader>x <C-0>
 
 
 
-" PLUGINS SUBLIME
+" PLUGINS
 " ----------------
 " AceJump plugin
 nnoremap <leader>c :AceJumpChar<CR>
-nnoremap <leader>i :AceJumpWithinLine<CR>
-nnoremap <leader>l :A,\ceJumpLine<CR>
+nnoremap <leader>f :AceJumpWithinLine<CR>
+nnoremap <leader>l :AceJumpLine<CR>
 nnoremap <leader>w :AceJumpWord<CR>
 
 
@@ -116,7 +117,6 @@ nnoremap <leader>kk :DestroyPane direction=self<CR>
 
 
 " LSP plugin
-
 " Show information (overlap with SublimeHaskell)
 nnoremap K <C-k><C-i>
 

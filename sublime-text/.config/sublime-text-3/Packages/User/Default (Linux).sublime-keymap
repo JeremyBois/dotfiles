@@ -101,18 +101,6 @@
     //         ]
     // },
 
-
-    // When coding using Haskell
-    {
-        "keys": ["ctrl+alt+m"],
-        "context": [
-            { "key": "haskell_source" },
-            { "key": "scanned_source" },
-        ],
-        "command": "show_panel",
-        "args": { "panel": "output.sublime_haskell_output_panel" }
-    },
-
     ////////////////////////////////////////////////////////////////////////////
     //////////////////////////// Toggle theme //////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
@@ -153,7 +141,15 @@
     //////////////////////////////// SUBLIME-HASKELL ///////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     // Currently not used in favor of LSP and HLS
-
+    {
+        "keys": ["ctrl+alt+m"],
+        "context": [
+            { "key": "haskell_source" },
+            { "key": "scanned_source" },
+        ],
+        "command": "show_panel",
+        "args": { "panel": "output.sublime_haskell_output_panel" }
+    },
 
     ////////////////////////////////////////////////////////////////////////////
     //////////////////////////////// LSP ///////////////////////////////////////
