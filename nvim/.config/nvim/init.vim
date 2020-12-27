@@ -1,5 +1,6 @@
 set nocompatible            " disable compatibility to old-time vi
 
+
 " Search
 "-------------------------
 set ignorecase              " case insensitive matching
@@ -53,9 +54,6 @@ set nowritebackup
 
 "Convenience
 "-------------------------
-"Make ";" synonymous with ":" to enter commands
-nmap ; :
-
 " Leader key with ","
 let g:mapleader = ','
 
@@ -81,6 +79,9 @@ endif
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
 
+" Should always be the first one to be loaded
+"  Putting it last as the doc says break vim
+Plug 'ryanoasis/vim-devicons'
 
 " Declare the list of plugins.
 Plug 'scrooloose/nerdtree'
@@ -105,13 +106,15 @@ call plug#end()
 
 " NerdTree
 "-------------------------
-map <leader>\ :NERDTreeToggle<CR>
+map <M-x> :NERDTreeToggle<CR>
 let NERDTreeIgnore = [ '\.js_dyn_o', '\.js_hi', '\.js_o', '\.js_dyn_hi', '\.dyn_hi', '\.dyn_o', '\.hi', '\.o', '\.p_hi', '\.p_o', '\.pyc$', '^__pycache__$']
 
-augroup nerdtree_open
-    autocmd!
-    autocmd VimEnter * NERDTree | wincmd p
-augroup END
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
 
 
 " Coc
