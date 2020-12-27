@@ -95,13 +95,13 @@ export EDITOR=nvim
 # Personnal Environnement
 #-------------------------
 ### Home
-export PATH=$PATH:~/.local/bin:~/bin
+export PATH=~/.local/bin:~/bin:$PATH
 
 ### ghcup-hs
-export PATH=$PATH:~/.ghcup/bin
+export PATH=~/.ghcup/bin:$PATH
 
 ### Cabal
-export PATH=$PATH:~/.cabal/bin
+export PATH=~/.cabal/bin:$PATH:
 
 
 #-------------------------
