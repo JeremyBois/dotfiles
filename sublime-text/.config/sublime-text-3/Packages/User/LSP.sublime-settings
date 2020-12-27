@@ -34,10 +34,11 @@
 		}
 	},
 	"diagnostics_gutter_marker": "sign",
-	"document_highlight_style": "box",
+	"document_highlight_style": "",
 	"log_debug": false,
 	"log_payloads": false,
 	"log_stderr": false,
 	"show_code_actions_bulb": true,
-	"show_symbol_action_links": true
+	"show_symbol_action_links": true,
+    "show_diagnostics_severity_level": 4,
 }

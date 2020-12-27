@@ -23,7 +23,7 @@ steps:
   # Remove trailing whitespace
   - trailing_whitespace: {}
 
-columns: 100
+columns: 90
 
 newline: native
 
