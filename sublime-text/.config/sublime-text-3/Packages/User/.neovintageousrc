@@ -101,6 +101,9 @@ snoremap i <Esc>i
 nnoremap <leader>x <C-0>
 
 
+" Center view
+nnoremap <leader>m :ShowAtCenter<CR>
+
 
 " PLUGINS
 " ----------------

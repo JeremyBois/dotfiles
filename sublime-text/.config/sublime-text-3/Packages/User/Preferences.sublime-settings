@@ -167,7 +167,7 @@
 		"bin"
 	],
 	"font_face": "Mononoki Nerd Font Mono",
-	"font_size": 14,
+	"font_size": 15,
 	"highlight_line": false,
 	"ignored_packages":
 	[
@@ -239,6 +239,6 @@
 	},
 	"vintageous_use_ctrl_keys": true,
 	"wide_caret": true,
-	"word_wrap": false,
+	"word_wrap": "auto",
 	"wrap_width": 90
 }
