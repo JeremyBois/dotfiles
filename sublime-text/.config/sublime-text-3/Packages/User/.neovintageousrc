@@ -26,6 +26,13 @@
 "                                             --> n (move to next)
 "                                             --> u (undo last action)
 
+" Z based shortcuts
+" ## Cursor position as view center: zz
+" ## Cursor position as view top: zt
+" ## Cursor position as view bottom: zb
+" ## Close without saving: ZQ
+" ## Close and ask for save: ZZ
+
 
 
 " CONVENIENCE
@@ -89,7 +96,6 @@ nnoremap <C-y> <C-r>
 nnoremap <C-z> u
 
 " Sublime <C-d> using motion
-nnoremap <C-d> gh
 snoremap <C-d> j
 snoremap <C-p> k
 snoremap <C-k> l
@@ -99,10 +105,6 @@ snoremap i <Esc>i
 " Opened using <M-x>
 " Go back to previous file with <Esc>
 nnoremap <leader>x <C-0>
-
-
-" Center view
-nnoremap <leader>m :ShowAtCenter<CR>
 
 
 " PLUGINS

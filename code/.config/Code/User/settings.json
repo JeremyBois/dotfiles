@@ -572,5 +572,16 @@
     "breadcrumbs.enabled": false,
     "update.showReleaseNotes": false,
     "update.mode": "none",
-    "haskell.updateBehavior": "never-check"
+    "haskell.updateBehavior": "never-check",
+    "explorer.confirmDelete": false,
+    "haskell.liquidOn": true,
+    "vim.leader": ",",
+    "vim.neovimPath": "/usr/bin/nvim",
+    "keyboard.dispatch": "keyCode",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 400,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "cmake.configureOnOpen": true,
+    "cmake.generator": "Unix Makefiles"
 }

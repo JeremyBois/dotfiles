@@ -89,4 +89,12 @@
         "key": "ctrl+shift+f4",
         "command": "workbench.action.togglePanel"
     },
+
+
+    // SUGGESTIONS
+    {
+        "key": "ctrl+space",
+        "command": "toggleSuggestionDetails",
+        "when": "suggestWidgetVisible && textInputFocus"
+    }
 ]

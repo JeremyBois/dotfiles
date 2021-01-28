@@ -1,8 +1,5 @@
 " CONVENIENCE
 " ----------------
-"Make ";" synonymous with ":" to enter commands
-nmap ; :
-
 " Have j and k navigate visual lines rather than logical ones
 nmap j gj
 nmap k gk
@@ -21,3 +18,8 @@ unmap <C-x>
 nmap U     <C-r>
 nmap <C-y> <C-r>
 nmap <C-z> u
+
+
+" VIM COMMANDS
+" ----------------
+nmap ZZ <C-w>
