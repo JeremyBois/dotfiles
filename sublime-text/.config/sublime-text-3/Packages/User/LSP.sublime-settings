@@ -17,7 +17,7 @@
 					"completionSnippetsOn": true,
 					"hlintOn": true,
 					"maxNumberOfProblems": 100,
-					"formattingProvider": "ormolu",
+					"formattingProvider": "fourmolu",
 					"formatOnImportOn": true
 				}
 			},
@@ -41,4 +41,6 @@
 	"show_code_actions_bulb": true,
 	"show_symbol_action_links": true,
     "show_diagnostics_severity_level": 4,
+  	"show_diagnostics_count_in_view_status": true,
+  	"show_diagnostics_in_view_status": true,
 }

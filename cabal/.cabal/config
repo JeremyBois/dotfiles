@@ -222,24 +222,21 @@ program-default-options
   ghc-options:
     -- https://github.com/haskell/vscode-haskell#local-documentation
     -haddock
-    -- https://kowainik.github.io/posts/2019-02-06-style-guide#ghc-options
-    -Wall
-    -Wcompat
-    -Widentities
-    -Wincomplete-uni-patterns
-    -Wincomplete-record-updates
-    -Wredundant-constraints
-    -Wmissing-export-lists
-    -Wpartial-fields
-    -Wmissing-deriving-strategies
-    -Wunused-imports
-    -- Cleaner outputs
-    -fhide-source-paths
-    -freverse-errors
-    -- Create hie informations
-    -- -fwrite-ide-info
-    -- -hiedir=.hie
-
+    -- Only on personnal project to avoid noise
+    -- -- https://kowainik.github.io/posts/2019-02-06-style-guide#ghc-options
+    -- -Wall
+    -- -Wcompat
+    -- -Widentities
+    -- -Wincomplete-uni-patterns
+    -- -Wincomplete-record-updates
+    -- -Wredundant-constraints
+    -- -Wmissing-export-lists
+    -- -Wpartial-fields
+    -- -Wmissing-deriving-strategies
+    -- -Wunused-imports
+    -- -- Cleaner outputs
+    -- -fhide-source-paths
+    -- -freverse-errors
 
   -- ghc-pkg-options:
   -- ghcjs-options:
