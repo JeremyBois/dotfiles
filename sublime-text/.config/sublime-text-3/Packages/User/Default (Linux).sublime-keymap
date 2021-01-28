@@ -94,10 +94,16 @@
     //         ]
     // },
 
-    // // When coding using C++
+    // // When coding using C++ (now using LSP with clangd)
     // { "keys": ["f12"], "command": "ecc_goto_declaration",
     //     "context": [
-    //             {"key" : "selector", "operator": "equal", "operand": "source.cpp"},
+    //             {"key" : "selector", "operator": "equal", "operand": "source.c++"},
+    //         ]
+    // },
+
+    // {"keys": ["ctrl+k", "ctrl+i"], "command": "ecc_show_popup_info",
+    //     "context": [
+    //             {"key" : "selector", "operator": "equal", "operand": "source.c++"},
     //         ]
     // },
 
@@ -116,25 +122,25 @@
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////// Origami /////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-    { "keys": ["ctrl+k", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
-    { "keys": ["ctrl+k", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
-    { "keys": ["ctrl+k", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+k", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+    { "keys": ["ctrl+k", "up"], "command": "travel_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+k", "right"], "command": "travel_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+k", "down"], "command": "travel_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+k", "left"], "command": "travel_to_pane", "args": {"direction": "left"} },
 
-    { "keys": ["ctrl+k", "ctrl+k"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
-    { "keys": ["ctrl+k", "ctrl+l"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
-    { "keys": ["ctrl+k", "ctrl+j"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+k", "ctrl+h"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+    { "keys": ["ctrl+k", "shift+up"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+    { "keys": ["ctrl+k", "shift+right"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+    { "keys": ["ctrl+k", "shift+down"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+    { "keys": ["ctrl+k", "shift+left"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
 
-    { "keys": ["ctrl+k", "alt+k"], "command": "create_pane_with_cloned_file", "args": {"direction": "up"} },
-    { "keys": ["ctrl+k", "alt+l"], "command": "create_pane_with_cloned_file", "args": {"direction": "right"} },
-    { "keys": ["ctrl+k", "alt+j"], "command": "create_pane_with_cloned_file", "args": {"direction": "down"} },
-    { "keys": ["ctrl+k", "alt+h"], "command": "create_pane_with_cloned_file", "args": {"direction": "left"} },
+    { "keys": ["ctrl+k", "alt+up"], "command": "create_pane_with_cloned_file", "args": {"direction": "up"} },
+    { "keys": ["ctrl+k", "alt+right"], "command": "create_pane_with_cloned_file", "args": {"direction": "right"} },
+    { "keys": ["ctrl+k", "alt+down"], "command": "create_pane_with_cloned_file", "args": {"direction": "down"} },
+    { "keys": ["ctrl+k", "alt+left"], "command": "create_pane_with_cloned_file", "args": {"direction": "left"} },
 
-    { "keys": ["ctrl+k", "K"], "command": "create_pane", "args": {"direction": "up", "give_focus": true} },
-    { "keys": ["ctrl+k", "L"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
-    { "keys": ["ctrl+k", "J"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
-    { "keys": ["ctrl+k", "H"], "command": "create_pane", "args": {"direction": "left", "give_focus": true} },
+    { "keys": ["ctrl+k", "ctrl+up"], "command": "create_pane", "args": {"direction": "up", "give_focus": true} },
+    { "keys": ["ctrl+k", "ctrl+right"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
+    { "keys": ["ctrl+k", "ctrl+down"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
+    { "keys": ["ctrl+k", "ctrl+left"], "command": "create_pane", "args": {"direction": "left", "give_focus": true} },
 
 
     ////////////////////////////////////////////////////////////////////////////
