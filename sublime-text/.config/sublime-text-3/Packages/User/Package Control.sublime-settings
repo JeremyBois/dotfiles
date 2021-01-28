@@ -11,7 +11,7 @@
 		"CMake",
 		"Dockerfile Syntax Highlighting",
 		"DotENV",
-		"EasyClangComplete",
+		"DoxyDoxygen",
 		"Gitmoji",
 		"Language - French - Français",
 		"LaTeXTools",
@@ -23,7 +23,6 @@
 		"Python 3",
 		"SideBarEnhancements",
 		"sublack",
-		"SublimeHaskell",
 		"SublimeREPL"
 	]
 }

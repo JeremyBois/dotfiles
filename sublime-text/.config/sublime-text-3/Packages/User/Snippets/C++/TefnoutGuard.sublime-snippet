@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+#ifndef __${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
+#define __${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
+
+#include "TefnoutPCH.hpp"
+
+namespace Tefnout
+{
+    ${1:}
+}
+
+
+#endif
+]]></content>
+    <tabTrigger>tefnout</tabTrigger>
+    <scope>source.c++</scope>
+</snippet>
