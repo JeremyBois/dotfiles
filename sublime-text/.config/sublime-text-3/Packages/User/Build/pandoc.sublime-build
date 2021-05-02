@@ -24,6 +24,12 @@
                     "--pdf-engine=xelatex", "-o", "${file_path}/${file_base_name}.pdf"],
         },
         {
+            "name": "Make CNAM pdf",
+            "cmd": ["pandoc", "-r", "markdown+smart", "${file_path}/${file_base_name}.md",
+                    "--standalone", "--highlight-style", "tango", "--template", "/home/pampi/Documents/Logiciels/Templates/CNAM.tex", "--number-sections", "--top-level-division=chapter",
+                    "--pdf-engine=xelatex", "-o", "${file_path}/${file_base_name}.pdf"],
+        },
+        {
             "name": "Make tex",
             "cmd": ["pandoc", "-r", "markdown+smart", "${file_path}/${file_base_name}.md",
                     "--standalone", "--template", "/home/pampi/Documents/Logiciels/Templates/jeremyDefault.tex", "--listings", "--number-sections", "--top-level-division=chapter",

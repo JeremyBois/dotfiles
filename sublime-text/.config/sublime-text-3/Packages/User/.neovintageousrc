@@ -65,6 +65,7 @@ nnoremap <leader>? n?\V
 nnoremap <leader>d "_d
 nnoremap <leader>D "_D
 vnoremap <leader>d "_d
+
 " Store and paste in clipboard
 " <C-c> and <C-v>
 " Or using leader to populate clipboard

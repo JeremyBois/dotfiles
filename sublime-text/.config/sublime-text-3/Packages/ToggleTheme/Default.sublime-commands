@@ -4,14 +4,14 @@
         "command": "toggle_theme"
     },
     {
-        "caption": "Preferences: ToggleTheme Settings – Default",
+        "caption": "ToggleTheme: Settings – Default",
         "command": "open_file", "args":
         {
             "file": "${packages}/ToggleTheme/ToggleTheme.sublime-settings"
         }
     },
     {
-        "caption": "Preferences: ToggleTheme Settings – User",
+        "caption": "ToggleTheme: Settings – User",
         "command": "open_file", "args":
         {
             "file": "${packages}/User/ToggleTheme.sublime-settings"

@@ -24,7 +24,9 @@
 		"impactants",
 		"hypervolumes",
 		"tensorisation",
-		"l’hypervolume"
+		"l’hypervolume",
+		"Tefnout",
+		"Créajeux"
 	],
 	"always_show_minimap_viewport": true,
 	"auto_complete_cycle": true,
@@ -167,7 +169,7 @@
 		"bin"
 	],
 	"font_face": "Mononoki Nerd Font Mono",
-	"font_size": 12,
+	"font_size": 14,
 	"highlight_line": false,
 	"ignored_packages":
 	[
@@ -184,6 +186,7 @@
 		"Schott",
 		"Spirops",
 		"Unity",
+		"Viewport",
 		"Witty",
 		"attr",
 		"d'Iteca",
@@ -193,7 +196,8 @@
 		"len",
 		"meth",
 		"param",
-		"seealso"
+		"seealso",
+		"viewport"
 	],
 	"indent_guide_options":
 	[
