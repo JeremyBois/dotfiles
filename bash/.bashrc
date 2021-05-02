@@ -91,6 +91,9 @@ export HISTSIZE=10000
 ## Friendly editor in place of vi
 export EDITOR=nvim
 
+## Disable dotnet telemetry
+export DOTNET_CLI_TELEMETRY_OPTOUT=true
+
 #-------------------------
 # Personnal Environnement
 #-------------------------

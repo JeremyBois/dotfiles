@@ -6,7 +6,7 @@
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.cursorBlinking": true,
     "editor.mouseWheelZoom": true,
-    "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
+    "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
     "extensions.autoUpdate": false,
     "haskell.formattingProvider": "stylish-haskell",
     "haskell.trace.server": "messages",
@@ -579,9 +579,21 @@
     "vim.neovimPath": "/usr/bin/nvim",
     "keyboard.dispatch": "keyCode",
     "vim.highlightedyank.enable": true,
-    "vim.highlightedyank.duration": 400,
+    "vim.highlightedyank.duration": 800,
     "vim.useSystemClipboard": true,
     "vim.easymotion": true,
     "cmake.configureOnOpen": true,
-    "cmake.generator": "Unix Makefiles"
+    "cmake.generator": "Unix Makefiles",
+    "vim.enableNeovim": true,
+    "vim.handleKeys": {
+
+        "<C-r>": false, 
+        "<C-s>": false,
+        "<C-o>": false,
+        "<C-T>": false,
+        "<C-w>": false,
+    },
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    "vim.textwidth": 110,
+    "clangd.onConfigChanged": "ignore"
 }

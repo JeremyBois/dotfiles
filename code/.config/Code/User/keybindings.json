@@ -5,26 +5,26 @@
 
 [
     // VIM EMULATION
-    {
-        "key": "escape",
-        "command": "modaledit.enterNormal",
-        "when": "editorTextFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    },
-    // Make escape work again to exit multi-cursor works again with modal
-    {
-        "key": "escape",
-        "command": "removeSecondaryCursors",
-        "when": "editorHasMultipleSelections"
-    },
+    // {
+    //     "key": "escape",
+    //     "command": "modaledit.enterNormal",
+    //     "when": "editorTextFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // },
+    // // Make escape work again to exit multi-cursor works again with modal
+    // {
+    //     "key": "escape",
+    //     "command": "removeSecondaryCursors",
+    //     "when": "editorHasMultipleSelections"
+    // },
 
 
     // SUBLIME TEXT
     {
-        "key": "alt+=",
+        "key": "alt+j",
         "command": "workbench.action.navigateForward"
     },
     {
-        "key": "alt+-",
+        "key": "alt+k",
         "command": "workbench.action.navigateBack"
     },
     {
