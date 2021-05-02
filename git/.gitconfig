@@ -11,3 +11,7 @@
     default = simple
 [credential]
     helper = cache
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
