@@ -1,15 +1,15 @@
 <snippet>
     <content><![CDATA[
-#include "TefnoutPCH.hpp"
+#include "CppRoguePCH.hpp"
 
 #include "${TM_FILENAME/(\w+)\.cpp/$1\E/g}.hpp"
 
-namespace Tefnout {
+namespace cppRogue {
 
-    ${1:}
+${1:}
 
 }
 ]]></content>
-    <tabTrigger>tefnoutSource</tabTrigger>
+    <tabTrigger>cppRogueSource</tabTrigger>
     <scope>source.c++</scope>
 </snippet>

@@ -3,11 +3,11 @@
 #ifndef __TEFNOUT_${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
 #define __TEFNOUT_${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
 
-namespace Tefnout
-{
-    ${1:}
-}
+namespace Tefnout {
 
+${1:}
+
+}
 
 #endif
 ]]></content>

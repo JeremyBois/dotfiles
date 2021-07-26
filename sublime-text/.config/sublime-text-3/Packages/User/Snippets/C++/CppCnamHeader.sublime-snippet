@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+#ifndef __CPPROGUE_${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
+#define __CPPROGUE_${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
+
+#include "CppRogue/Core/Platform.hpp"
+
+namespace cppRogue {
+
+class CPPROGUE_API ${1:}
+{
+  public:
+    ${1:}() = default;
+    ~${1:}() = default;
+};
+
+}  // namespace cppRogue
+
+#endif
+]]></content>
+    <tabTrigger>cppRogueHeader</tabTrigger>
+    <scope>source.c++</scope>
+</snippet>
