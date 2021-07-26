@@ -6,7 +6,7 @@
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.cursorBlinking": true,
     "editor.mouseWheelZoom": true,
-    "workbench.colorTheme": "Braver's Solarized Dark (themed workbench)",
+    "workbench.colorTheme": "Better Solarized Light",
     "extensions.autoUpdate": false,
     "haskell.formattingProvider": "stylish-haskell",
     "haskell.trace.server": "messages",
@@ -595,5 +595,8 @@
     },
     "vim.sneakUseIgnorecaseAndSmartcase": true,
     "vim.textwidth": 110,
-    "clangd.onConfigChanged": "ignore"
+    "clangd.onConfigChanged": "ignore",
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    }
 }
