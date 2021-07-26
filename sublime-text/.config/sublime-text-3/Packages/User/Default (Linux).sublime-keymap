@@ -2,20 +2,34 @@
     ////////////////////////////////////////////////////////////////////////////
     ///////////////////////  Navigation  ///////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-
     // Change focus group
     // Default keys
     // ctrl+1, ctrl+2, ...
-
     // Toogle sideBar
-    { "keys": ["alt+x"], "command": "toggle_side_bar" },
-
+    {
+        "keys": [
+            "alt+x"
+        ],
+        "command": "toggle_side_bar"
+    },
     // Toogle menu
-    {"keys": ["ctrl+alt+0"], "command": "toggle_menu"},
-
+    {
+        "keys": [
+            "ctrl+alt+0"
+        ],
+        "command": "toggle_menu"
+    },
     // Toggle cmdPanel
-    { "keys": ["ctrl+,"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
-
+    {
+        "keys": [
+            "ctrl+,"
+        ],
+        "command": "show_panel",
+        "args": {
+            "panel": "console",
+            "toggle": true
+        }
+    },
     // Control layout using default
     // --> Vertical
     // shift+Alt+"2"
@@ -25,150 +39,406 @@
     // shift+Alt+"9"
     // shift+Alt+"8"
     // shift+Alt+"7"
-
-
     // Move quickly between references
-    { "keys": ["alt+k"], "command": "jump_back" },
-    { "keys": ["alt+j"], "command": "jump_forward" },
-
-    { "keys": ["alt+f"], "command": "open_dir",
-      "args": {"dir": "$file_path", "file": "$file_name"} },
-
+    {
+        "keys": [
+            "alt+k"
+        ],
+        "command": "jump_back"
+    },
+    {
+        "keys": [
+            "alt+j"
+        ],
+        "command": "jump_forward"
+    },
+    {
+        "keys": [
+            "alt+f"
+        ],
+        "command": "open_dir",
+        "args": {
+            "dir": "$file_path",
+            "file": "$file_name"
+        }
+    },
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////  Autocompletion  //////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-
-    { "keys": ["ctrl+space"], "command": "auto_complete" },
-    { "keys": ["ctrl+space"], "command": "replace_completion_with_auto_complete",
-        "context":
-        [
-            { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
-            { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-            { "key": "setting.tab_completion", "operator": "equal", "operand": true }
+    {
+        "keys": [
+            "ctrl+space"
+        ],
+        "command": "auto_complete"
+    },
+    {
+        "keys": [
+            "ctrl+space"
+        ],
+        "command": "replace_completion_with_auto_complete",
+        "context": [
+            {
+                "key": "last_command",
+                "operator": "equal",
+                "operand": "insert_best_completion"
+            },
+            {
+                "key": "auto_complete_visible",
+                "operator": "equal",
+                "operand": false
+            },
+            {
+                "key": "setting.tab_completion",
+                "operator": "equal",
+                "operand": true
+            }
         ]
     },
-
-
     // ////////////////////////////////////////////////////////////////////////////
-    // ///////////////////////// Intellisense /////////////////////////////////////
+    // ///////////////////////////// Anaconda /////////////////////////////////////
     // ////////////////////////////////////////////////////////////////////////////
-
     // When coding using Python
     {
-        "command": "anaconda_goto", "keys": ["f12"], "context": [
-            {"key": "selector", "operator": "equal", "operand": "source.python"}
+        "command": "anaconda_goto",
+        "keys": [
+            "f12"
+        ],
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.python"
+            }
         ]
     },
     {
-        "command": "anaconda_find_usages", "keys": ["shift+f12"], "context": [
-            {"key": "selector", "operator": "equal", "operand": "source.python"}
+        "command": "anaconda_find_usages",
+        "keys": [
+            "shift+f12"
+        ],
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.python"
+            }
         ]
     },
     {
-        "command": "anaconda_doc", "keys": ["ctrl+k", "ctrl+i"], "context": [
-            {"key": "selector", "operator": "equal", "operand": "source.python"}
+        "command": "anaconda_doc",
+        "keys": [
+            "ctrl+k",
+            "ctrl+i"
+        ],
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.python"
+            }
         ]
     },
-
-
-    // // When coding using C#
-    // {"command": "omni_sharp_go_to_definition", "keys": ["f12"],
-    //     "context": [
-    //         {"key" : "selector", "operator": "equal", "operand": "source.cs"}
-    //     ]
-    // },
-    // {"command": "omni_sharp_find_usages", "keys": ["shift+F12"],
-    //     "context": [
-    //         {"key" : "selector", "operator": "equal", "operand": "source.cs"}
-    //     ]
-    // },
-    // {"command": "omni_sharp_type_lookup", "keys": ["ctrl+k", "ctrl+i"],
-    //     "context": [
-    //         {"key" : "selector", "operator": "equal", "operand": "source.cs"}
-    //     ]
-    // },
-    // // Must comment OmniSharp default to avoid losing ctrl+k, ctrl+d control
-    // {"command": "omni_sharp_format_document", "keys": ["ctrl+alt+f"],
-    //     "context": [
-    //             {"key" : "selector", "operator": "equal", "operand": "source.cs"}
-    //         ]
-    // },
-
-    // // When coding using C++ (now using LSP with clangd)
-    // { "keys": ["f12"], "command": "ecc_goto_declaration",
-    //     "context": [
-    //             {"key" : "selector", "operator": "equal", "operand": "source.c++"},
-    //         ]
-    // },
-
-    // {"keys": ["ctrl+k", "ctrl+i"], "command": "ecc_show_popup_info",
-    //     "context": [
-    //             {"key" : "selector", "operator": "equal", "operand": "source.c++"},
-    //         ]
-    // },
-
     ////////////////////////////////////////////////////////////////////////////
     //////////////////////////// Toggle theme //////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     {
-      "keys": ["ctrl+alt+;"], "command": "toggle_theme"
+        "keys": [
+            "ctrl+alt+;"
+        ],
+        "command": "toggle_theme"
     },
-
     ////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////// Vintageous ///////////////////////////////////
+    ///////////////////////////// Vintage //////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-
-
     ////////////////////////////////////////////////////////////////////////////
     ////////////////////////////// Origami /////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
-    { "keys": ["ctrl+k", "up"], "command": "travel_to_pane", "args": {"direction": "up"} },
-    { "keys": ["ctrl+k", "right"], "command": "travel_to_pane", "args": {"direction": "right"} },
-    { "keys": ["ctrl+k", "down"], "command": "travel_to_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+k", "left"], "command": "travel_to_pane", "args": {"direction": "left"} },
-
-    { "keys": ["ctrl+k", "shift+up"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
-    { "keys": ["ctrl+k", "shift+right"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
-    { "keys": ["ctrl+k", "shift+down"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
-    { "keys": ["ctrl+k", "shift+left"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
-
-    { "keys": ["ctrl+k", "alt+up"], "command": "create_pane_with_cloned_file", "args": {"direction": "up"} },
-    { "keys": ["ctrl+k", "alt+right"], "command": "create_pane_with_cloned_file", "args": {"direction": "right"} },
-    { "keys": ["ctrl+k", "alt+down"], "command": "create_pane_with_cloned_file", "args": {"direction": "down"} },
-    { "keys": ["ctrl+k", "alt+left"], "command": "create_pane_with_cloned_file", "args": {"direction": "left"} },
-
-    { "keys": ["ctrl+k", "ctrl+up"], "command": "create_pane", "args": {"direction": "up", "give_focus": true} },
-    { "keys": ["ctrl+k", "ctrl+right"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
-    { "keys": ["ctrl+k", "ctrl+down"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
-    { "keys": ["ctrl+k", "ctrl+left"], "command": "create_pane", "args": {"direction": "left", "give_focus": true} },
-
-
-    ////////////////////////////////////////////////////////////////////////////
-    //////////////////////////////// SUBLIME-HASKELL ///////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    // Currently not used in favor of LSP and HLS
     {
-        "keys": ["ctrl+alt+m"],
-        "context": [
-            { "key": "haskell_source" },
-            { "key": "scanned_source" },
+        "keys": [
+            "ctrl+k",
+            "up"
         ],
-        "command": "show_panel",
-        "args": { "panel": "output.sublime_haskell_output_panel" }
+        "command": "travel_to_pane",
+        "args": {
+            "direction": "up"
+        }
     },
-
+    {
+        "keys": [
+            "ctrl+k",
+            "right"
+        ],
+        "command": "travel_to_pane",
+        "args": {
+            "direction": "right"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "down"
+        ],
+        "command": "travel_to_pane",
+        "args": {
+            "direction": "down"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "left"
+        ],
+        "command": "travel_to_pane",
+        "args": {
+            "direction": "left"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "shift+up"
+        ],
+        "command": "carry_file_to_pane",
+        "args": {
+            "direction": "up"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "shift+right"
+        ],
+        "command": "carry_file_to_pane",
+        "args": {
+            "direction": "right"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "shift+down"
+        ],
+        "command": "carry_file_to_pane",
+        "args": {
+            "direction": "down"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "shift+left"
+        ],
+        "command": "carry_file_to_pane",
+        "args": {
+            "direction": "left"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "alt+up"
+        ],
+        "command": "create_pane_with_cloned_file",
+        "args": {
+            "direction": "up"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "alt+right"
+        ],
+        "command": "create_pane_with_cloned_file",
+        "args": {
+            "direction": "right"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "alt+down"
+        ],
+        "command": "create_pane_with_cloned_file",
+        "args": {
+            "direction": "down"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "alt+left"
+        ],
+        "command": "create_pane_with_cloned_file",
+        "args": {
+            "direction": "left"
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "ctrl+up"
+        ],
+        "command": "create_pane",
+        "args": {
+            "direction": "up",
+            "give_focus": true
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "ctrl+right"
+        ],
+        "command": "create_pane",
+        "args": {
+            "direction": "right",
+            "give_focus": true
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "ctrl+down"
+        ],
+        "command": "create_pane",
+        "args": {
+            "direction": "down",
+            "give_focus": true
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "ctrl+left"
+        ],
+        "command": "create_pane",
+        "args": {
+            "direction": "left",
+            "give_focus": true
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "ctrl+z"
+        ],
+        "command": "zoom_pane",
+        "args": {
+            "fraction": 0.9
+        }
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "ctrl+u"
+        ],
+        "command": "unzoom_pane",
+        "args": {}
+    },
+    {
+        "keys": [
+            "ctrl+k",
+            "k"
+        ],
+        "command": "destroy_pane",
+        "args": {
+            "direction": "self"
+        }
+    },
     ////////////////////////////////////////////////////////////////////////////
     //////////////////////////////// LSP ///////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////
     // Document Symbols (a replacement for ST's "Goto Symbol")
-    {"keys": ["ctrl+r"], "command": "lsp_document_symbols", "context": [{"key": "setting.lsp_active"}]},
-
-    // Get information about the context under cursor
-    {"keys": ["ctrl+k", "ctrl+i"], "command": "lsp_hover", "context": [{"key": "setting.lsp_active"}]},
-
+    {
+        "command": "lsp_document_symbols",
+        "keys": [
+            "primary+r"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "documentSymbolProvider"
+            }
+        ]
+    },
+    // Workspace Symbols (a replacement for ST's "Goto Symbol In Project")
+    {
+        "command": "lsp_workspace_symbols",
+        "keys": [
+            "primary+shift+r"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "workspaceSymbolProvider"
+            }
+        ]
+    },
+    // Symbol Hover
+    {
+        "command": "lsp_hover",
+        "keys": [
+            "ctrl+k",
+            "ctrl+i"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "hoverProvider"
+            }
+        ]
+    },
     // Go To Definition
-    {"keys": ["f12"], "command": "lsp_symbol_definition", "context": [{"key": "setting.lsp_active"}]},
-
-     // Find Symbol References
-    { "keys": ["shift+f12"], "command": "lsp_symbol_references", "context": [{"key": "setting.lsp_active"}]},
+    {
+        "command": "lsp_symbol_definition",
+        "args": {
+            "side_by_side": false
+        },
+        "keys": [
+            "f12"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "definitionProvider"
+            },
+            {
+                "key": "auto_complete_visible",
+                "operator": "equal",
+                "operand": false
+            }
+        ]
+    },
+    // Find Symbol References
+    {
+        "command": "lsp_symbol_references",
+        "keys": [
+            "shift+f12"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "referencesProvider"
+            },
+        ]
+    },
+    // Rename Symbol
+    {
+        "command": "lsp_symbol_rename",
+        "keys": [
+            "f2"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "renameProvider"
+            }
+        ]
+    },
 ]

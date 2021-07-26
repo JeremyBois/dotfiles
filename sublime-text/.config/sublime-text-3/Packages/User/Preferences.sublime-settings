@@ -26,7 +26,8 @@
 		"tensorisation",
 		"l’hypervolume",
 		"Tefnout",
-		"Créajeux"
+		"Créajeux",
+		"Marshalling",
 	],
 	"always_show_minimap_viewport": true,
 	"auto_complete_cycle": true,
@@ -34,23 +35,23 @@
 	[
 		{
 			"characters": ".>:",
-			"selector": "source.c++ - string - comment - constant.numeric"
+			"selector": "source.c++ - string - comment - constant.numeric",
 		},
 		{
 			"characters": ".>:",
-			"selector": "source.c - string - comment - constant.numeric"
+			"selector": "source.c - string - comment - constant.numeric",
 		},
 		{
 			"characters": ".>: ",
-			"selector": "source.objc++ - string - comment - constant.numeric"
+			"selector": "source.objc++ - string - comment - constant.numeric",
 		},
 		{
 			"characters": ".>: ",
-			"selector": "source.objc - string - comment - constant.numeric"
+			"selector": "source.objc - string - comment - constant.numeric",
 		},
 		{
 			"characters": ".>: ",
-			"selector": "source.cuda-c++ - string - comment - constant.numeric"
+			"selector": "source.cuda-c++ - string - comment - constant.numeric",
 		}
 	],
 	"binary_file_patterns":
@@ -76,8 +77,8 @@
 	"caret_extra_width": 1,
 	"caret_style": "smooth",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/Theme/LightSolarized.tmTheme",
-	"dictionary": "Packages/Language - French - Français/fr_FR.dic",
+	"color_scheme": "Packages/User/Theme/DarkSolarized.tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
 	"drag_text": false,
 	"draw_centered": true,
 	"draw_minimap_border": false,
@@ -169,13 +170,11 @@
 		"bin"
 	],
 	"font_face": "Mononoki Nerd Font Mono",
-	"font_size": 14,
+	"font_size": 11,
 	"highlight_line": false,
 	"ignored_packages":
 	[
 		"Six",
-		"Vintage",
-		"Vintageous"
 	],
 	"ignored_words":
 	[
@@ -196,8 +195,9 @@
 		"len",
 		"meth",
 		"param",
+		"refactoring",
 		"seealso",
-		"viewport"
+		"viewport",
 	],
 	"indent_guide_options":
 	[
@@ -236,10 +236,10 @@
 		"<C-s>": false,
 		"<C-v>": false,
 		"<C-w>": false,
-		"<C-x>": false
+		"<C-x>": false,
 	},
 	"vintageous_use_ctrl_keys": true,
 	"wide_caret": true,
 	"word_wrap": "auto",
-	"wrap_width": 90
+	"wrap_width": 90,
 }
