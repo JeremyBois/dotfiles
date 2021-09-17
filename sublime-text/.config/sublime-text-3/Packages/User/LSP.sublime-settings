@@ -50,7 +50,7 @@
 	"show_diagnostics_severity_level": 4,
 	"show_diagnostics_count_in_view_status": true,
 	"show_diagnostics_in_view_status": true,
-	"lsp_format_on_save": false,
+	"lsp_format_on_save": true,
 	"show_diagnostics_panel_on_save": 2,
 	"show_references_in_quick_panel": true,
 }
