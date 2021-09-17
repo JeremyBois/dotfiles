@@ -17,7 +17,7 @@
             "id": "donotdisturb",
             "settings": {
                 "skip_break_windows": "",
-                "take_break_windows": "subl evince firefox obsidian",
+                "take_break_windows": "evince firefox obsidian",
                 "unfullscreen": true,
                 "while_on_battery": false
             },
@@ -98,9 +98,9 @@
         }
     ],
     "postpone_duration": 3,
-    "pre_break_warning_time": 10,
+    "pre_break_warning_time": 5,
     "rpc_port": 7200,
-    "short_break_duration": 15,
+    "short_break_duration": 20,
     "short_break_interval": 15,
     "short_breaks": [
         {
