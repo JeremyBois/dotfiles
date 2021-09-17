@@ -583,7 +583,7 @@
     "vim.useSystemClipboard": true,
     "vim.easymotion": true,
     "cmake.configureOnOpen": true,
-    "cmake.generator": "Unix Makefiles",
+    "cmake.generator": "Ninja",
     "vim.enableNeovim": true,
     "vim.handleKeys": {
 
