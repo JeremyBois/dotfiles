@@ -1,7 +1,7 @@
 <snippet>
     <content><![CDATA[
-#ifndef __TEFNOUT_${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
-#define __TEFNOUT_${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
+#ifndef TEFNOUT_${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
+#define TEFNOUT_${TM_FILENAME/(\w+)\.hpp/\U$1\E/g}__HPP
 
 namespace Tefnout {
 
