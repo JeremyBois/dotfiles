@@ -45,13 +45,13 @@
     // Move quickly between references
     {
         "keys": [
-            "alt+k"
+            "alt+j"
         ],
         "command": "jump_back"
     },
     {
         "keys": [
-            "alt+j"
+            "alt+l"
         ],
         "command": "jump_forward"
     },
@@ -444,4 +444,32 @@
             }
         ]
     },
+    // Format File
+    {
+        "command": "lsp_format_document",
+        "keys": [
+            "alt+m"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "documentFormattingProvider | documentRangeFormattingProvider"
+            }
+        ]
+    },
+    // Format Selection
+    {
+        "command": "lsp_format_document_range",
+        "keys": [
+            "alt+shift+m"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "documentRangeFormattingProvider"
+            }
+        ]
+    }
 ]
