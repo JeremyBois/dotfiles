@@ -71,6 +71,9 @@ alias restartCinnamonAfterCrash='export DISPLAY=:0; cinnamon --replace &'
 # Alias pacman
 alias cacheClean='paccache -rk2 && paccache -ruk0'
 
+# Kill thunar
+alias killThunar='sudo sudo rm /usr/share/dbus-1/services/org.xfce.Thunar.FileManager1.service -f && killall Thunar'
+
 
 #-------------------------
 # Settings
@@ -89,7 +92,7 @@ export HISTFILESIZE=20000
 export HISTSIZE=10000
 
 ## Friendly editor in place of vi
-export EDITOR=nvim
+export EDITOR=nano
 
 ## Disable dotnet telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
@@ -189,6 +192,11 @@ export FZF_CTRL_T_OPTS="--preview-window right:50%:border --preview '(cat {} || 
 export FZF_ALT_C_COMMAND="fd --type d --hidden --exclude '.git' --exclude '.svn' . /"
 export FZF_ALT_C_OPTS="--preview-window right:50%:border --preview '(tree -C {}) 2> /dev/null | head -200'"
 
+
+#-------------------------
+# CUE generator (cue-gen)
+#-------------------------
+source /home/pampi/Documents/Logiciels/RetroGame/psx-cue-sbi/generate-cue.sh
 
 
 #-------------------------
