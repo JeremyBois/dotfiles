@@ -42,6 +42,30 @@
 				"res",
 			],
 		},
+		"openscad": {
+			// enable this configuration
+			"enabled": true,
+			// the startup command -- what you would type in a terminal
+			"command": [
+				"/home/pampi/Documents/Logiciels/LSP/openscad-language-server-linux",
+				"--fmt-style",
+				"LLVM"
+			],
+			// Default port of the server
+			"tcp_port": 3245,
+			"env": {
+				"$OPENSCADPATH": "/home/pampi/.local/share/OpenSCAD/libraries"
+			},
+			// "settings": {
+			// 	"openscad": {
+			// 		"search_paths": "/home/pampi/.local/share/OpenSCAD/libraries",
+			// 		"fmt_exe": "clang-format",
+			// 		"fmt_style": "LLVM"
+			// 	}
+			// },
+			// the selector that selects which type of buffers this language server attaches to
+			"selector": "source.scad"
+		}
 	},
 	"diagnostics_gutter_marker": "sign",
 	"document_highlight_style": "",
